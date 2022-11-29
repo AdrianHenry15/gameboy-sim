@@ -1,0 +1,8 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./assets/imgs/gameboy-wallpaper.jpg");
+  height: 100vh;
+}
+

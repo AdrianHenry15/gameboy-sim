@@ -1,0 +1,143 @@
+.gameboy-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: black solid 1px;
+    background-color: rgb(255, 220, 19);
+    z-index: 100;
+    width: 400px;
+    height: 610px;
+    border-radius: 0 0 60px 0;
+
+    .screen-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        width: 270px;
+        height: 200px;
+        margin-top: 15px;
+        background-color: rgb(61, 61, 61);
+        padding: 50px;
+
+        .pi-container {
+            position: absolute;
+            transform: translate(-159px, -40px);
+
+            .icon-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .power-light {
+                    width: 5px;
+                    height: 5px;
+                    background-color: red;
+                    border-radius: 50%;
+                    margin-right: 3px;
+                    border: black 1px solid;
+                }
+
+                .arrow-ind {
+                    font-size: 8px;
+                }
+            }
+
+            .power-label {
+                color: gray;
+                font-size: 8px;
+                margin-top: 5px;
+            }
+        }
+
+        .gameboy-label {
+            position: absolute;
+            transform: translate(0px, 126px);
+
+            .logo {
+                width: 200px;
+            }
+        }
+        
+        .screen {
+            display: flex;
+            border: black inset 1px;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(89, 102, 58);
+        }
+    }
+
+    .controller-area {
+        display: flex;
+        flex-direction: column;
+
+        .nintendo-logo {
+            display: flex;
+            margin-top: 20px;
+            border: inset 2px black;
+            border-radius: 20px;
+            padding: 2px 17px 2px 17px;
+
+            .trademark {
+                position: absolute;
+                transform: translate(67px, 0px);
+                width: 10px;
+            }
+        }
+    }
+
+    .button-container {
+        display: flex;
+
+        .dpad-container {
+            display: flex;
+
+            .dpad {
+                display: flex;
+                width: 100px;
+                position: absolute;
+                transform: translate(-130px, 20px);
+            }
+        }
+
+        .action-btns-container {
+            display: flex;
+            position: absolute;
+            transform: translate(120px, 60px);
+
+            .action-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                background-color: black;
+                border-radius: 50%;
+                margin: 10px;
+                width: 30px;
+                height: 30px;
+            }
+
+            .a-btn {
+                transform: translate(0px, -30px);
+            }
+        }
+
+        .option-btns-container {
+            display: flex;
+            position: absolute;
+            transform: translate(3px, 160px);
+
+            .option-btn {
+                width: 25px;
+                height: 5px;
+                border-radius: 100px;
+                background-color: black;
+                border: solid 1px black;
+                margin: 10px;
+
+            }
+        }
+    }
+}
