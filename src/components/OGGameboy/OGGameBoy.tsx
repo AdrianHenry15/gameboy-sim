@@ -31,9 +31,6 @@ const OGGameBoy = ({ switchComponent }: OGGameboyProps) => {
 					</div>
 					<div className='ogg-power-label'>POWER</div>
 				</div>
-				<div className='ogg-gameboy-label'>
-					<img className='ogg-logo' src={OGGameboyLogo} alt='gbLogo' />
-				</div>
 				<div className='ogg-screen'>
 					<Soundcloud />
 				</div>
@@ -41,7 +38,9 @@ const OGGameBoy = ({ switchComponent }: OGGameboyProps) => {
 			<div className='ogg-controller-area'>
 				<div className='ogg-nintendo-logo'>
 					Nintendo
-					<img className='ogg-trademark' src={R} alt='trademark' />
+					<div className='ogg-gameboy-label'>
+						<img className='ogg-logo' src={OGGameboyLogo} alt='gbLogo' />
+					</div>
 				</div>
 				<div className='ogg-button-container'>
 					<div className='ogg-dpad-container'>
@@ -70,8 +69,11 @@ const OGGameBoy = ({ switchComponent }: OGGameboyProps) => {
 						</div>
 					</div>
 					<div className='ogg-action-btns-container'>
-						<div className='ogg-action-btn ogg-b-btn'>B</div>
-						<div className='ogg-action-btn ogg-a-btn'>A</div>
+						<div className='ogg-btn-imprint'></div>
+						<div className='ogg-action-btn ogg-b-btn'></div>
+						<div className='ogg-action-label ogg-b-label'>B</div>
+						<div className='ogg-action-btn ogg-a-btn'></div>
+						<div className='ogg-action-label ogg-a-label'>A</div>
 					</div>
 					<div className='ogg-option-btns-container'>
 						<div
