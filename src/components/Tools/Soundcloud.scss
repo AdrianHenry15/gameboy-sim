@@ -1,0 +1,25 @@
+.music-container {
+    opacity: 50%;
+}
+
+.music-frame {
+    font-size: 10px;
+    color: #cccccc;
+    line-break: anywhere;
+    word-break: normal;
+    overflow: scroll;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+
+    .frame-profile,
+    .frame-song {
+        color: #cccccc;
+        text-decoration: none;
+    }
+}
+
+.sc-background-light {
+    display: none !important;
+}

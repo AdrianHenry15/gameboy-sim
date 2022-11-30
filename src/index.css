@@ -1,5 +1,6 @@
 :root {
-  --gameboy-color: rgb(255, 220, 19);
+  --og-gameboy-color: rgb(211, 211, 211);
+  --gbcolor-color: rgb(255, 220, 19);
   --btn-active-color: rgb(157, 211, 255);
 }
 

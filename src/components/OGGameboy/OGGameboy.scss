@@ -1,16 +1,16 @@
-.gameboy-container {
+.ogg-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     border: black solid 1px;
-    background-color: var(--gameboy-color);
+    background-color: var(--og-gameboy-color);
     z-index: 100;
     width: 400px;
     height: 610px;
-    border-radius: 0 0 60px 0;
+    border-radius: 10px 10px 60px 10px;
 
-    .screen-container {
+    .ogg-screen-container {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -21,16 +21,16 @@
         background-color: rgb(61, 61, 61);
         padding: 50px;
 
-        .pi-container {
+        .ogg-pi-container {
             position: absolute;
             transform: translate(-159px, -40px);
 
-            .icon-container {
+            .ogg-icon-container {
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
-                .power-light {
+                .ogg-power-light {
                     width: 5px;
                     height: 5px;
                     background-color: red;
@@ -39,28 +39,28 @@
                     border: black 1px solid;
                 }
 
-                .arrow-ind {
+                .ogg-arrow-ind {
                     font-size: 8px;
                 }
             }
 
-            .power-label {
+            .ogg-power-label {
                 color: gray;
                 font-size: 8px;
                 margin-top: 5px;
             }
         }
 
-        .gameboy-label {
+        .ogg-gameboy-label {
             position: absolute;
             transform: translate(0px, 126px);
 
-            .logo {
+            .ogg-logo {
                 width: 200px;
             }
         }
         
-        .screen {
+        .ogg-screen {
             display: flex;
             border: black inset 1px;
             width: 100%;
@@ -69,18 +69,18 @@
         }
     }
 
-    .controller-area {
+    .ogg-controller-area {
         display: flex;
         flex-direction: column;
 
-        .nintendo-logo {
+        .ogg-nintendo-logo {
             display: flex;
             margin-top: 20px;
             border: inset 2px black;
             border-radius: 20px;
             padding: 2px 17px 2px 17px;
 
-            .trademark {
+            .ogg-trademark {
                 position: absolute;
                 transform: translate(67px, 0px);
                 width: 10px;
@@ -88,21 +88,21 @@
         }
     }
 
-    .button-container {
+    .ogg-button-container {
         display: flex;
 
-        .dpad-container {
+        .ogg-dpad-container {
             display: flex;
             z-index: 1;
 
-            .dpad {
+            .ogg-dpad {
                 display: flex;
                 width: 100px;
                 position: absolute;
                 transform: translate(-130px, 20px);
             }
 
-            .circle-dpad {
+            .ogg-circle-dpad {
                 position: absolute;
                 transform: translate(-90px, 57px);
                 font-size: 20px;
@@ -114,12 +114,12 @@
                 justify-content: center;
             }
 
-            .circle-dpad:active {
+            .ogg-circle-dpad:active {
                 font-size: 15px;
                 transform: translate(-88px, 60px);
             }
 
-            .dpad-btn {
+            .ogg-dpad-btn {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -128,37 +128,38 @@
                 height: 28px;
                 cursor: pointer;
 
-                .dpad-arrow {
+                .ogg-dpad-arrow {
                     display: flex;
-                    color: var(--gameboy-color);
+                    color: var(--GBColor-color) !important;
                     border-radius: 50%;
+                    z-index: 10;
                 }
             }
 
-            .dpad-btn:active {
+            .ogg-dpad-btn:active {
                 background-color: var(--btn-active-color);
             }
 
-            .right-dpad {
+            .ogg-right-dpad {
                 position: absolute;
                 transform: translate(-62px, 56px);
                 border-radius: 0 5px 5px 0;
             }
 
-            .left-dpad {
+            .ogg-left-dpad {
                 position: absolute;
                 transform: translate(-123px, 56px);
                 border-radius: 5px 0px 0px 5px;
             }
 
-            .up-dpad {
+            .ogg-up-dpad {
                 position: absolute;
                 transform: translate(-94.5px, 24px);
                 border-radius: 5px 5px 0px 0px;
                 width: 29px;
             }
 
-            .down-dpad {
+            .ogg-down-dpad {
                 position: absolute;
                 transform: translate(-94.5px, 87px);
                 border-radius: 0px 0px 5px 5px;
@@ -166,12 +167,12 @@
             }
         }
 
-        .action-btns-container {
+        .ogg-action-btns-container {
             display: flex;
             position: absolute;
             transform: translate(120px, 60px);
 
-            .action-btn {
+            .ogg-action-btn {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -184,25 +185,25 @@
                 cursor: pointer;
             }
 
-            .action-btn:hover {
+            .ogg-action-btn:hover {
                 background-color: blue;
             }
 
-            .action-btn:active {
+            .ogg-action-btn:active {
                 background-color: rgb(157, 211, 255);
             }
 
-            .a-btn {
+            .ogg-a-btn {
                 transform: translate(0px, -30px);
             }
         }
 
-        .option-btns-container {
+        .ogg-option-btns-container {
             display: flex;
             position: absolute;
             transform: translate(3px, 160px);
 
-            .option-btn {
+            .ogg-option-btn {
                 width: 25px;
                 height: 5px;
                 border-radius: 100px;
@@ -212,39 +213,13 @@
                 cursor: pointer;
             }
 
-            .option-btn:hover {
+            .ogg-option-btn:hover {
                 background-color: blue;
             }
 
-            .option-btn:active {
+            .ogg-option-btn:active {
                 background-color: rgb(157, 211, 255);
             }
         }
     }
-}
-
-.music-container {
-    opacity: 50%;
-}
-
-.music-frame {
-    font-size: 10px;
-    color: #cccccc;
-    line-break: anywhere;
-    word-break: normal;
-    overflow: scroll;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    font-weight: 100;
-
-    .frame-profile,
-    .frame-song {
-        color: #cccccc;
-        text-decoration: none;
-    }
-}
-
-.sc-background-light {
-    display: none !important;
 }
