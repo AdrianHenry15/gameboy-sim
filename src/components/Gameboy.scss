@@ -93,6 +93,7 @@
 
         .dpad-container {
             display: flex;
+            z-index: 1;
 
             .dpad {
                 display: flex;
@@ -103,13 +104,19 @@
 
             .circle-dpad {
                 position: absolute;
-                transform: translate(-92px, 54px);
-                font-size: 25px;
+                transform: translate(-90px, 57px);
+                font-size: 20px;
                 cursor: pointer;
+                border-radius: 50%;
+                height: 10px;
+                width: 10px;
+                text-align: center;
+                justify-content: center;
             }
 
             .circle-dpad:active {
-                background-color: var(--btn-active-color);
+                font-size: 15px;
+                transform: translate(-88px, 60px);
             }
 
             .dpad-btn {
@@ -126,10 +133,10 @@
                     color: var(--gameboy-color);
                     border-radius: 50%;
                 }
+            }
 
-                .dpad-arrow:active {
-                    background-color: var(--btn-active-color);
-                }
+            .dpad-btn:active {
+                background-color: var(--btn-active-color);
             }
 
             .right-dpad {
