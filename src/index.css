@@ -1,3 +1,8 @@
+:root {
+  --gameboy-color: rgb(255, 220, 19);
+  --btn-active-color: rgb(157, 211, 255);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
