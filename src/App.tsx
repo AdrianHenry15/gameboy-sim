@@ -13,7 +13,7 @@ export enum Consoles {
 }
 
 function App() {
-	let [console, setConsole] = useState(Consoles.GBCOLOR)
+	let [console, setConsole] = useState(Consoles.OGGAMEBOY)
 
 	const focusComponent = (name: Consoles) => {
 		setConsole(name)

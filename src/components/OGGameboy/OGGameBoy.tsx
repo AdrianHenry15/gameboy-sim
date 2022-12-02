@@ -5,8 +5,9 @@ import { BiLeftArrow } from "react-icons/bi"
 import { BiUpArrow } from "react-icons/bi"
 import { BiDownArrow } from "react-icons/bi"
 import { BsFillPlayCircleFill } from "react-icons/bs"
-import Soundcloud from "../Tools/Soundcloud"
+import Soundcloud from "../Tools/Soundcloud/Soundcloud"
 import { Consoles } from "../../App"
+import DPad from "../Tools/DPad/DPad"
 
 const OGGameboyLogo = require("../../assets/imgs/gameboy-color-logo.png")
 const R = require("../../assets/imgs/r-png.png")
@@ -52,29 +53,7 @@ const OGGameboy = ({ switchComponent }: OGGameboyProps) => {
 				</div>
 				<div className='ogg-button-container'>
 					<div className='ogg-dpad-container'>
-						<div className='ogg-dpad-btn ogg-left-dpad'>
-							<div className='ogg-dpad-arrow ogg-left-dpad-arrow'>
-								<BiLeftArrow />
-							</div>
-						</div>
-						<div className='ogg-dpad-btn ogg-up-dpad'>
-							<div className='ogg-dpad-arrow ogg-up-dpad-arrow'>
-								<BiUpArrow />
-							</div>
-						</div>
-						<div className='ogg-dpad-arrow ogg-circle-dpad'>
-							<BsFillPlayCircleFill />
-						</div>
-						<div className='ogg-dpad-btn ogg-down-dpad'>
-							<div className='ogg-dpad-arrow ogg-down-dpad-arrow'>
-								<BiDownArrow />
-							</div>
-						</div>
-						<div className='ogg-dpad-btn ogg-right-dpad'>
-							<div className='ogg-dpad-arrow ogg-right-dpad-arrow'>
-								<BiRightArrow />
-							</div>
-						</div>
+						<DPad />
 					</div>
 					<div className='ogg-action-btns-container'>
 						<div className='ogg-action-btn ogg-b-btn'>B</div>

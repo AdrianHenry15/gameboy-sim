@@ -5,8 +5,9 @@ import { BiLeftArrow } from "react-icons/bi"
 import { BiUpArrow } from "react-icons/bi"
 import { BiDownArrow } from "react-icons/bi"
 import { BsFillPlayCircleFill } from "react-icons/bs"
-import Soundcloud from "../Tools/Soundcloud"
+import Soundcloud from "../Tools/Soundcloud/Soundcloud"
 import { Consoles } from "../../App"
+import DPad from "../Tools/DPad/DPad"
 
 const GBColorLogo = require("../../assets/imgs/gameboy-color-logo.png")
 const R = require("../../assets/imgs/r-png.png")
@@ -52,29 +53,7 @@ const GBA = ({ switchComponent }: GBAProps) => {
 				</div>
 				<div className='gba-button-container'>
 					<div className='gba-dpad-container'>
-						<div className='gba-dpad-btn gba-left-dpad'>
-							<div className='gba-dpad-arrow gba-left-dpad-arrow'>
-								<BiLeftArrow />
-							</div>
-						</div>
-						<div className='gba-dpad-btn gba-up-dpad'>
-							<div className='gba-dpad-arrow gba-up-dpad-arrow'>
-								<BiUpArrow />
-							</div>
-						</div>
-						<div className='gba-dpad-arrow gba-circle-dpad'>
-							<BsFillPlayCircleFill />
-						</div>
-						<div className='gba-dpad-btn gba-down-dpad'>
-							<div className='gba-dpad-arrow gba-down-dpad-arrow'>
-								<BiDownArrow />
-							</div>
-						</div>
-						<div className='gba-dpad-btn gba-right-dpad'>
-							<div className='gba-dpad-arrow gba-right-dpad-arrow'>
-								<BiRightArrow />
-							</div>
-						</div>
+						<DPad />
 					</div>
 					<div className='gba-action-btns-container'>
 						<div className='gba-action-btn gba-b-btn'>B</div>
