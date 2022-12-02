@@ -6,22 +6,50 @@
     border: black solid 1px;
     background-color: var(--og-gameboy-color);
     z-index: 100;
-    width: 350px;
-    height: 520px;
-    border-radius: 10px 10px 60px 60px;
+    width: 300px;
+    height: 470px;
+    border-radius: 10px 10px 100px 40px;
 
     .ogg-screen-container {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         border-radius: 10px;
         margin-top: 15px;
         margin-left: 10px;
         margin-right: 10px;
-        background-color: rgb(61, 61, 61);
-        padding-top: 30px;
+        background-color: var(--screen-back-color);
+        padding-top: 10px;
         padding-left: 10px;
-        padding-right: 38px;
+        
+        padding-bottom: 30px;
+
+        .screen-lines {
+            display: flex;
+            width: 100%;
+            height: 1px;
+            margin-bottom: 5px;
+        }
+
+        .red-line {
+            background-color: rgb(129, 0, 0);
+        }
+
+        .blue-line {
+            background-color: blue;
+        }
+
+        .dot-matrix {
+            display: flex;
+            position: absolute;
+            font-size: 10px;
+            transform: translate(0px, -80px);
+            color: rgb(214, 214, 214);
+            background-color: var(--screen-back-color);
+            padding-left: 5px;
+            padding-right: 5px;
+        }
 
         .ogg-pi-container {
             display: flex;
@@ -34,8 +62,7 @@
 
                 .ogg-icon-indicators {
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    justify-content: flex-start;
                 }
 
                 .ogg-power-light {
@@ -63,16 +90,14 @@
             display: flex;
             padding-top: 20px;
             padding-bottom: 20px;
-
-            .ogg-logo {
-                width: 200px;
-            }
         }
 
         .ogg-screen-n-logo {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-left: 5px;
+            margin-right: 40px;
         }
         
         .ogg-screen {
@@ -87,15 +112,19 @@
     .ogg-controller-area {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        
         width: 100%;
 
         .ogg-nintendo-logo {
             display: flex;
-            margin-top: 20px;
-            border: inset 2px black;
-            border-radius: 20px;
-            padding: 2px 17px 2px 17px;
+            align-items: flex-end;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 20px;
+
+            .ogg-logo {
+                width: 120px;
+            }
 
             .ogg-trademark {
                 height: 10px;
@@ -119,6 +148,16 @@
         .ogg-action-btns-container {
             display: flex;
 
+            .btn-imprint {
+                position: absolute;
+                transform: translate(2px, -1px) rotate(-20deg);
+                background-color: rgb(175, 175, 175);
+                border: solid 1px rgb(172, 172, 172);
+                width: 85px;
+                height: 35px;
+                border-radius: 20px;
+            }
+
             .ogg-action-btn {
                 display: flex;
                 justify-content: center;
@@ -131,6 +170,7 @@
                 height: 30px;
                 cursor: pointer;
                 font-size: 10px;
+                z-index: 1;
             }
 
             .ogg-action-btn:hover {
@@ -150,7 +190,8 @@
 
 .ogg-option-btns-container {
     display: flex;
-    transform: translate(0px, 35px);
+    align-self: center;
+    margin-top: 60px;
 
     .ogg-option-btn {
         width: 25px;
@@ -160,6 +201,7 @@
         border: solid 1px black;
         margin: 10px;
         cursor: pointer;
+        transform: rotate(-29deg);
     }
 
     .ogg-option-btn:hover {

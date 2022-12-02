@@ -19,54 +19,49 @@ interface GBAProps {
 const GBA = ({ switchComponent }: GBAProps) => {
 	return (
 		<div className='gba-container'>
-			<div className='gba-screen-container'>
-				<div className='gba-pi-container'>
-					<div className='gba-icon-container'>
-						<div className='gba-icon-indicators'>
-							<div className='gba-power-light'></div>
-							<div className='gba-arrow-ind'>
-								<BiRightArrow />
-							</div>
-							<div className='gba-arrow-ind'>
-								<BiRightArrow />
-							</div>
-							<div className='gba-arrow-ind'>
-								<BiRightArrow />
-							</div>
-						</div>
-						<div className='gba-power-label'>POWER</div>
-					</div>
-					<div className='gba-screen-n-logo'>
-						<div className='gba-screen'>
-							<Soundcloud />
-						</div>
-						<div className='gba-gameboy-label'>
-							<img className='gba-logo' src={GBColorLogo} alt='gbLogo' />
-						</div>
-					</div>
-				</div>
+			<div className='gba-nintendo-logo'>
+				Nintendo
+				<img className='gba-trademark' src={R} alt='trademark' />
 			</div>
-			<div className='gba-controller-area'>
-				<div className='gba-nintendo-logo'>
-					Nintendo
-					<img className='gba-trademark' src={R} alt='trademark' />
-				</div>
-				<div className='gba-button-container'>
+			<div className='gba-container-internal'>
+				<div className='dpad-n-options'>
 					<div className='gba-dpad-container'>
 						<DPad />
 					</div>
-					<div className='gba-action-btns-container'>
-						<div className='gba-action-btn gba-b-btn'>B</div>
-						<div className='gba-action-btn gba-a-btn'>A</div>
+					<div className='gba-option-btns-container'>
+						<div
+							onClick={() => {
+								switchComponent(Consoles.GBCOLOR)
+							}}
+							className='gba-option-btn gba-pause-btn'></div>
+						<div onClick={() => switchComponent(Consoles.SP)} className='gba-option-btn gba-select-btn'></div>
 					</div>
 				</div>
-				<div className='gba-option-btns-container'>
-					<div
-						onClick={() => {
-							switchComponent(Consoles.GBCOLOR)
-						}}
-						className='gba-option-btn gba-pause-btn'></div>
-					<div onClick={() => switchComponent(Consoles.SP)} className='gba-option-btn gba-select-btn'></div>
+				<div className='gba-screen-container'>
+					<div className='gba-pi-container'>
+						<div className='gba-screen-n-logo'>
+							<div className='gba-screen'>
+								<Soundcloud />
+							</div>
+							<div className='gba-gameboy-label'>
+								<img className='gba-logo' src={GBColorLogo} alt='gbLogo' />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className='gba-controller-area'>
+					<div className='gba-icon-container'>
+						<div className='gba-icon-indicators'>
+							<div className='gba-power-light'></div>
+						</div>
+						<div className='gba-power-label'>POWER</div>
+					</div>
+					<div className='gba-button-container'>
+						<div className='gba-action-btns-container'>
+							<div className='gba-action-btn gba-b-btn'>B</div>
+							<div className='gba-action-btn gba-a-btn'>A</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

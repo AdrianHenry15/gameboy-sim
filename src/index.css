@@ -2,6 +2,8 @@
   --og-gameboy-color: rgb(211, 211, 211);
   --gbcolor-color: rgb(255, 220, 19);
   --btn-active-color: rgb(157, 211, 255);
+  --screen-back-color: rgb(61, 61, 61);
+  --gba-color: rgb(107, 91, 150);
 }
 
 body {

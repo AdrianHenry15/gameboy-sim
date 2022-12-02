@@ -6,8 +6,8 @@
     border: black solid 1px;
     background-color: var(--gbcolor-color);
     z-index: 100;
-    width: 350px;
-    height: 520px;
+    width: 300px;
+    height: 495px;
     border-radius: 10px 10px 60px 60px;
 
     .gc-screen-container {
@@ -92,14 +92,15 @@
 
         .gc-nintendo-logo {
             display: flex;
-            margin-top: 20px;
+            margin-top: 15px;
             border: inset 2px black;
             border-radius: 20px;
-            padding: 2px 17px 2px 17px;
+            font-size: 10px;
+            padding: 2px 6px 2px 8px;
 
             .gc-trademark {
-                height: 10px;
-                width: 10px;
+                height: 7px;
+                width: 7px;
             }
         }
     }

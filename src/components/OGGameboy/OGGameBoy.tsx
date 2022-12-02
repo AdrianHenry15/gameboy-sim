@@ -9,8 +9,8 @@ import Soundcloud from "../Tools/Soundcloud/Soundcloud"
 import { Consoles } from "../../App"
 import DPad from "../Tools/DPad/DPad"
 
-const OGGameboyLogo = require("../../assets/imgs/gameboy-color-logo.png")
-const R = require("../../assets/imgs/r-png.png")
+const OGGameboyLogo = require("../../assets/imgs/oggameboy-logo.png")
+const TM = require("../../assets/imgs/tm-png.png")
 
 interface OGGameboyProps {
 	switchComponent: (name: Consoles) => void
@@ -20,28 +20,19 @@ const OGGameboy = ({ switchComponent }: OGGameboyProps) => {
 	return (
 		<div className='ogg-container'>
 			<div className='ogg-screen-container'>
+				<div className='screen-lines red-line'></div>
+				<div className='dot-matrix'>DOT MATRIX WITH STEREO SOUND</div>
+				<div className='screen-lines blue-line'></div>
 				<div className='ogg-pi-container'>
 					<div className='ogg-icon-container'>
 						<div className='ogg-icon-indicators'>
 							<div className='ogg-power-light'></div>
-							<div className='ogg-arrow-ind'>
-								<BiRightArrow />
-							</div>
-							<div className='ogg-arrow-ind'>
-								<BiRightArrow />
-							</div>
-							<div className='ogg-arrow-ind'>
-								<BiRightArrow />
-							</div>
 						</div>
-						<div className='ogg-power-label'>POWER</div>
+						<div className='ogg-power-label'>BATTERY</div>
 					</div>
 					<div className='ogg-screen-n-logo'>
 						<div className='ogg-screen'>
 							<Soundcloud />
-						</div>
-						<div className='ogg-gameboy-label'>
-							<img className='ogg-logo' src={OGGameboyLogo} alt='gbLogo' />
 						</div>
 					</div>
 				</div>
@@ -49,13 +40,15 @@ const OGGameboy = ({ switchComponent }: OGGameboyProps) => {
 			<div className='ogg-controller-area'>
 				<div className='ogg-nintendo-logo'>
 					Nintendo
-					<img className='ogg-trademark' src={R} alt='trademark' />
+					<img className='ogg-logo' src={OGGameboyLogo} alt='gbLogo' />
+					<img className='ogg-trademark' src={TM} alt='trademark' />
 				</div>
 				<div className='ogg-button-container'>
 					<div className='ogg-dpad-container'>
 						<DPad />
 					</div>
 					<div className='ogg-action-btns-container'>
+						<div className='btn-imprint'></div>
 						<div className='ogg-action-btn ogg-b-btn'>B</div>
 						<div className='ogg-action-btn ogg-a-btn'>A</div>
 					</div>
