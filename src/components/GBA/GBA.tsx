@@ -1,15 +1,10 @@
 import React from "react"
 import "./GBA.scss"
-import { BiRightArrow } from "react-icons/bi"
-import { BiLeftArrow } from "react-icons/bi"
-import { BiUpArrow } from "react-icons/bi"
-import { BiDownArrow } from "react-icons/bi"
-import { BsFillPlayCircleFill } from "react-icons/bs"
 import Soundcloud from "../Tools/Soundcloud/Soundcloud"
 import { Consoles } from "../../App"
 import DPad from "../Tools/DPad/DPad"
 
-const GBColorLogo = require("../../assets/imgs/gameboy-color-logo.png")
+const GBALogo = require("../../assets/imgs/oggameboy-logo.png")
 const R = require("../../assets/imgs/r-png.png")
 
 interface GBAProps {
@@ -44,7 +39,7 @@ const GBA = ({ switchComponent }: GBAProps) => {
 								<Soundcloud />
 							</div>
 							<div className='gba-gameboy-label'>
-								<img className='gba-logo' src={GBColorLogo} alt='gbLogo' />
+								<img className='gba-logo' src={GBALogo} alt='gbLogo' />
 							</div>
 						</div>
 					</div>

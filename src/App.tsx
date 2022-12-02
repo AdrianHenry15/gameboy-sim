@@ -3,6 +3,9 @@ import "./App.css"
 import GBColor from "./components/GBColor/GBColor"
 import GBA from "./components/GBA/GBA"
 import OGGameBoy from "./components/OGGameboy/OGGameBoy"
+import GameAndWatch from "./components/GameAndWatch/GameAndWatch"
+import SP from "./components/SP/SP"
+import DS from "./components/DS/DS"
 
 export enum Consoles {
 	GAMEANDWATCH,
@@ -10,6 +13,7 @@ export enum Consoles {
 	GBCOLOR,
 	GBA,
 	SP,
+	DS,
 }
 
 function App() {
@@ -21,12 +25,18 @@ function App() {
 
 	const renderConsole = (): JSX.Element => {
 		const selectedConsole = console
-		if (selectedConsole === Consoles.GBCOLOR) {
-			return <GBColor switchComponent={focusComponent} />
+		if (selectedConsole === Consoles.GAMEANDWATCH) {
+			return <GameAndWatch switchComponent={focusComponent} />
 		} else if (selectedConsole === Consoles.OGGAMEBOY) {
 			return <OGGameBoy switchComponent={focusComponent} />
+		} else if (selectedConsole === Consoles.GBCOLOR) {
+			return <GBColor switchComponent={focusComponent} />
 		} else if (selectedConsole === Consoles.GBA) {
 			return <GBA switchComponent={focusComponent} />
+		} else if (selectedConsole === Consoles.SP) {
+			return <SP switchComponent={focusComponent} />
+		} else if (selectedConsole === Consoles.DS) {
+			return <DS switchComponent={focusComponent} />
 		} else {
 			return <div></div>
 		}
