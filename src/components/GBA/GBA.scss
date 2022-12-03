@@ -3,13 +3,12 @@
     position: relative;
     flex-direction: column;
     align-items: center;
-    border: black solid 1px;
+    border: white solid 1px;
     background-color: var(--gba-color);
     z-index: 100;
     width: 600px;
     height: 285px;
     border-radius: 30px 30px 60px 60px;
-    box-shadow: 7px 7px var(--gba-color);
 
     .gba-nintendo-logo {
         display: flex;

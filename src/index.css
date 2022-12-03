@@ -5,6 +5,7 @@
   --screen-back-color: rgb(61, 61, 61);
   --gba-color: rgb(107, 91, 150);
   --gnw-color: rgb(218, 194, 147);
+  --gnw-border-color: rgb(136, 1, 1);
 }
 
 body {

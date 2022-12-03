@@ -4,7 +4,7 @@ import Soundcloud from "../Tools/Soundcloud/Soundcloud"
 import { Consoles } from "../../App"
 import DPad from "../Tools/DPad/DPad"
 
-const GameAndWatchLogo = require("../../assets/imgs/oggameboy-logo.png")
+const GameAndWatchLogo = require("../../assets/imgs/gamenwatch.png")
 const R = require("../../assets/imgs/r-png.png")
 
 interface GameAndWatchProps {
@@ -14,35 +14,28 @@ interface GameAndWatchProps {
 const GameAndWatch = ({ switchComponent }: GameAndWatchProps) => {
 	return (
 		<div className='gnw-container'>
-			<div className='gnw-nintendo-logo'>
-				Nintendo
-				<img className='gnw-trademark' src={R} alt='trademark' />
-			</div>
 			<div className='gnw-container-internal'>
-				<div className='dpad-n-options'>
+				<div className='dpad-n-logo'>
+					<img src={GameAndWatchLogo} className='gnw-logo'></img>
 					<div className='gnw-dpad-container'>
 						<DPad />
 					</div>
 				</div>
 				<div className='gnw-screen-container'>
+					<div className='mario-bros'>SUPER MARIO BROS.</div>
 					<div className='gnw-pi-container'>
 						<div className='gnw-screen-n-logo'>
 							<div className='gnw-screen'>
 								<Soundcloud />
 							</div>
-							<div className='gnw-gameboy-label'>
-								<img className='gnw-logo' src={GameAndWatchLogo} alt='gbLogo' />
+							<div className='gnw-nintendo-logo'>
+								Nintendo
+								<img className='gnw-trademark' src={R} alt='trademark' />
 							</div>
 						</div>
 					</div>
 				</div>
 				<div className='gnw-controller-area'>
-					<div className='gnw-icon-container'>
-						<div className='gnw-icon-indicators'>
-							<div className='gnw-power-light'></div>
-						</div>
-						<div className='gnw-power-label'>POWER</div>
-					</div>
 					<div className='gnw-option-btns-container'>
 						<div
 							onClick={() => {
@@ -50,11 +43,18 @@ const GameAndWatch = ({ switchComponent }: GameAndWatchProps) => {
 							}}
 							className='gnw-option-btn gnw-pause-btn'></div>
 						<div onClick={() => switchComponent(Consoles.OGGAMEBOY)} className='gnw-option-btn gnw-select-btn'></div>
+						<div className='gnw-option-btn special-option'></div>
 					</div>
 					<div className='gnw-button-container'>
 						<div className='gnw-action-btns-container'>
-							<div className='gnw-action-btn gnw-b-btn'>B</div>
-							<div className='gnw-action-btn gnw-a-btn'>A</div>
+							<div className='gnw-single-btn-container'>
+								<div className='gnw-action-btn gnw-b-btn'></div>
+								<span className='b-btn btn-label'>B</span>
+							</div>
+							<div className='gnw-single-btn-container'>
+								<div className='gnw-action-btn gnw-a-btn'></div>
+								<span className='a-btn btn-label'>A</span>
+							</div>
 						</div>
 					</div>
 				</div>
