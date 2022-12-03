@@ -17,7 +17,7 @@ export enum Consoles {
 }
 
 function App() {
-	let [console, setConsole] = useState(Consoles.GAMEANDWATCH)
+	let [console, setConsole] = useState(Consoles.SP)
 
 	const focusComponent = (name: Consoles) => {
 		setConsole(name)
