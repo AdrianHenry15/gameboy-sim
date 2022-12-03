@@ -1,0 +1,190 @@
+.gnw-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border-left: 5px red inset;
+    border-right: 5px red inset;
+    border-top: red 20px inset;
+    border-bottom: red 20px inset;
+    background-color: var(--gnw-color);
+    z-index: 100;
+    width: 600px;
+    height: 285px;
+
+    .gnw-nintendo-logo {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        border: inset 2px black;
+        border-radius: 20px;
+        padding: 2px 10px 2px 13px;
+        font-size: 10px;
+    
+        .gnw-trademark {
+            height: 7px;
+            width: 7px;
+        }
+    }
+
+    .gnw-container-internal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .dpad-n-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+
+            .gnw-dpad-container {
+                display: flex;
+                z-index: 1;
+            }
+        }
+    }
+    
+    .gnw-option-btns-container {
+        display: flex;
+        flex-direction: column;
+        transform: translate(54px, 78px);
+    
+        .gnw-option-btn {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 5px;
+            cursor: pointer;
+        }
+    
+        .gnw-option-btn:hover {
+            background-color: blue;
+        }
+    
+        .gnw-option-btn:active {
+            background-color: rgb(157, 211, 255);
+        }
+    }
+
+    .gnw-screen-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgb(15, 15, 15);
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        flex: 2;
+        border: rgb(150, 150, 150) 1px solid;
+
+        .gnw-pi-container {
+            display: flex;
+            flex: 1;
+        }
+
+        .gnw-gameboy-label {
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            .gnw-logo {
+                width: 85px;
+            }
+        }
+
+        .gnw-screen-n-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .gnw-screen {
+            display: flex;
+            border: black inset 1px;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(89, 102, 58);
+        }
+    }
+
+    .gnw-controller-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        flex: 1;
+    }
+
+    .gnw-button-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+        .gnw-action-btns-container {
+            display: flex;
+            margin-left: 25px;
+
+            .gnw-action-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                background-color: white;
+                border-radius: 50%;
+                margin: 10px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 10px;
+            }
+
+            .gnw-action-btn:hover {
+                background-color: blue;
+            }
+
+            .gnw-action-btn:active {
+                background-color: rgb(157, 211, 255);
+            }
+
+            .gnw-a-btn {
+                transform: translate(-10px, -15px);
+            }
+        }
+    }
+}
+
+.gnw-icon-container {
+    display: flex;
+    transform: translate(0px, -83px);
+
+    .gnw-icon-indicators {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gnw-power-light {
+        width: 5px;
+        height: 5px;
+        background-color: red;
+        border-radius: 50%;
+        margin-right: 3px;
+        border: black 1px solid;
+    }
+
+    .gnw-arrow-ind {
+        font-size: 8px;
+    }
+}
+
+.gnw-power-label {
+    color: gray;
+    font-size: 8px;
+    margin-top: 5px;
+}
