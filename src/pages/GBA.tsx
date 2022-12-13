@@ -1,11 +1,10 @@
-import React from "react"
-import "./GBA.scss"
-import Soundcloud from "../Tools/Soundcloud/Soundcloud"
-import { Consoles } from "../../App"
-import DPad from "../Tools/DPad/DPad"
+import "../styles/GBA.scss"
+import Soundcloud from "../components/Soundcloud"
+import { Consoles } from "../App"
+import DPad from "../components/DPad"
 
-const GBALogo = require("../../assets/imgs/oggameboy-logo.png")
-const R = require("../../assets/imgs/r-png.png")
+const GBALogo = require("../assets/imgs/oggameboy-logo.png")
+const R = require("../assets/imgs/r-png.png")
 
 interface GBAProps {
 	switchComponent: (name: Consoles) => void

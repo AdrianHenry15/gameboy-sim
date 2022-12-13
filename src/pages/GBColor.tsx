@@ -1,16 +1,11 @@
-import React from "react"
-import "./GBColor.scss"
+import "../styles/GBColor.scss"
 import { BiRightArrow } from "react-icons/bi"
-import { BiLeftArrow } from "react-icons/bi"
-import { BiUpArrow } from "react-icons/bi"
-import { BiDownArrow } from "react-icons/bi"
-import { BsFillPlayCircleFill } from "react-icons/bs"
-import Soundcloud from "../Tools/Soundcloud/Soundcloud"
-import { Consoles } from "../../App"
-import DPad from "../Tools/DPad/DPad"
+import Soundcloud from "../components/Soundcloud"
+import { Consoles } from "../App"
+import DPad from "../components/DPad"
 
-const GBColorLogo = require("../../assets/imgs/gameboy-color-logo.png")
-const R = require("../../assets/imgs/r-png.png")
+const GBColorLogo = require("../assets/imgs/gameboy-color-logo.png")
+const R = require("../assets/imgs/r-png.png")
 
 interface GBColorProps {
 	switchComponent: (name: Consoles) => void

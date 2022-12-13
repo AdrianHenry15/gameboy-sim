@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import "./App.css"
-import GBColor from "./components/GBColor/GBColor"
-import GBA from "./components/GBA/GBA"
-import OGGameBoy from "./components/OGGameboy/OGGameBoy"
-import GameAndWatch from "./components/GameAndWatch/GameAndWatch"
-import SP from "./components/SP/SP"
-import DS from "./components/DS/DS"
+import GBColor from "./pages/GBColor"
+import GBA from "./pages/GBA"
+import OGGameBoy from "./pages/OGGameBoy"
+import GameAndWatch from "./pages/GameAndWatch"
+import SP from "./pages/SP"
+import DS from "./pages/DS"
 
 export enum Consoles {
 	GAMEANDWATCH,

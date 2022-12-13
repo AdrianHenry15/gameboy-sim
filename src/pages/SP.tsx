@@ -1,16 +1,10 @@
-import React from "react"
-import "./SP.scss"
-import { BiRightArrow } from "react-icons/bi"
-import { BiLeftArrow } from "react-icons/bi"
-import { BiUpArrow } from "react-icons/bi"
-import { BiDownArrow } from "react-icons/bi"
-import { BsFillPlayCircleFill } from "react-icons/bs"
-import Soundcloud from "../Tools/Soundcloud/Soundcloud"
-import { Consoles } from "../../App"
-import DPad from "../Tools/DPad/DPad"
+import "../styles/SP.scss"
+import Soundcloud from "../components/Soundcloud"
+import { Consoles } from "../App"
+import DPad from "../components/DPad"
 
-const SPLogo = require("../../assets/imgs/gameboy-color-logo.png")
-const R = require("../../assets/imgs/r-png.png")
+const SPLogo = require("../assets/imgs/gameboy-color-logo.png")
+const R = require("../assets/imgs/r-png.png")
 
 interface SPProps {
 	switchComponent: (name: Consoles) => void

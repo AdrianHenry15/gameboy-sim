@@ -1,16 +1,10 @@
-import React from "react"
-import "./OGGameboy.scss"
-import { BiRightArrow } from "react-icons/bi"
-import { BiLeftArrow } from "react-icons/bi"
-import { BiUpArrow } from "react-icons/bi"
-import { BiDownArrow } from "react-icons/bi"
-import { BsFillPlayCircleFill } from "react-icons/bs"
-import Soundcloud from "../Tools/Soundcloud/Soundcloud"
-import { Consoles } from "../../App"
-import DPad from "../Tools/DPad/DPad"
+import "../styles/OGGameboy.scss"
+import Soundcloud from "../components/Soundcloud"
+import { Consoles } from "../App"
+import DPad from "../components/DPad"
 
-const OGGameboyLogo = require("../../assets/imgs/oggameboy-logo.png")
-const TM = require("../../assets/imgs/tm-png.png")
+const OGGameboyLogo = require("../assets/imgs/oggameboy-logo.png")
+const TM = require("../assets/imgs/tm-png.png")
 
 interface OGGameboyProps {
 	switchComponent: (name: Consoles) => void

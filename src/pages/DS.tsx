@@ -1,5 +1,5 @@
 import React from "react"
-import { Consoles } from "../../App"
+import { Consoles } from "../App"
 
 interface DSProps {
 	switchComponent: (name: Consoles) => void

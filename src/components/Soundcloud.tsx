@@ -1,5 +1,5 @@
 import React from "react"
-import "./Soundcloud.scss"
+import "../styles/Soundcloud.scss"
 
 const Soundcloud = () => {
 	return (

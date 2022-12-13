@@ -1,5 +1,4 @@
-import React from "react"
-import "./DPad.scss"
+import "../styles/DPad.scss"
 import { BiDownArrow, BiLeftArrow, BiRightArrow, BiUpArrow } from "react-icons/bi"
 import { BsFillPlayCircleFill } from "react-icons/bs"
 

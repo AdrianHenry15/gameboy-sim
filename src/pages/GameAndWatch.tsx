@@ -1,11 +1,10 @@
-import React from "react"
-import "./GameAndWatch.scss"
-import Soundcloud from "../Tools/Soundcloud/Soundcloud"
-import { Consoles } from "../../App"
-import DPad from "../Tools/DPad/DPad"
+import "../styles/GameAndWatch.scss"
+import Soundcloud from "../components/Soundcloud"
+import { Consoles } from "../App"
+import DPad from "../components/DPad"
 
-const GameAndWatchLogo = require("../../assets/imgs/gamenwatch.png")
-const R = require("../../assets/imgs/r-png.png")
+const GameAndWatchLogo = require("../assets/imgs/gamenwatch.png")
+const R = require("../assets/imgs/r-png.png")
 
 interface GameAndWatchProps {
 	switchComponent: (name: Consoles) => void
