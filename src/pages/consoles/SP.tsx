@@ -1,10 +1,10 @@
-import "../styles/SP.scss"
-import Soundcloud from "../components/Soundcloud"
-import { Consoles } from "../App"
-import DPad from "../components/DPad"
+import "../../styles/SP.scss"
+import Soundcloud from "../../components/Soundcloud"
+import { Consoles } from "../../App"
+import DPad from "../../components/DPad"
 
-const SPLogo = require("../assets/imgs/gameboy-color-logo.png")
-const R = require("../assets/imgs/r-png.png")
+const SPLogo = require("../../assets/imgs/gameboy-color-logo.png")
+const R = require("../../assets/imgs/r-png.png")
 
 interface SPProps {
 	switchComponent: (name: Consoles) => void
@@ -43,17 +43,17 @@ const SP = ({ switchComponent }: SPProps) => {
 					<div className='rect'></div>
 				</div>
 				<div className='sp-controller-area'>
-					<div className='sp-nintendo-logo'>
+					<label className='sp-nintendo-logo'>
 						Nintendo
 						<img className='sp-trademark' src={R} alt='trademark' />
-					</div>
+					</label>
 					<div className='sp-button-container'>
 						<div className='sp-dpad-container'>
 							<DPad />
 						</div>
 						<div className='sp-action-btns-container'>
-							<div className='sp-action-btn sp-b-btn'>B</div>
-							<div className='sp-action-btn sp-a-btn'>A</div>
+							<button className='sp-action-btn sp-b-btn'>B</button>
+							<button className='sp-action-btn sp-a-btn'>A</button>
 						</div>
 					</div>
 					<div className='sp-option-btns-container'>

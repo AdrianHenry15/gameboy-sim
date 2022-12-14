@@ -1,11 +1,11 @@
-import "../styles/GBColor.scss"
+import "../../styles/GBColor.scss"
 import { BiRightArrow } from "react-icons/bi"
-import Soundcloud from "../components/Soundcloud"
-import { Consoles } from "../App"
-import DPad from "../components/DPad"
+import Soundcloud from "../../components/Soundcloud"
+import { Consoles } from "../../App"
+import DPad from "../../components/DPad"
 
-const GBColorLogo = require("../assets/imgs/gameboy-color-logo.png")
-const R = require("../assets/imgs/r-png.png")
+const GBColorLogo = require("../../assets/imgs/gameboy-color-logo.png")
+const R = require("../../assets/imgs/r-png.png")
 
 interface GBColorProps {
 	switchComponent: (name: Consoles) => void
@@ -29,7 +29,7 @@ const GBColor = ({ switchComponent }: GBColorProps) => {
 								<BiRightArrow />
 							</div>
 						</div>
-						<div className='gc-power-label'>POWER</div>
+						<label className='gc-power-label'>POWER</label>
 					</div>
 					<div className='gc-screen-n-logo'>
 						<div className='gc-screen'>
@@ -42,17 +42,17 @@ const GBColor = ({ switchComponent }: GBColorProps) => {
 				</div>
 			</div>
 			<div className='gc-controller-area'>
-				<div className='gc-nintendo-logo'>
+				<label className='gc-nintendo-logo'>
 					Nintendo
 					<img className='gc-trademark' src={R} alt='trademark' />
-				</div>
+				</label>
 				<div className='gc-button-container'>
 					<div className='gc-dpad-container'>
 						<DPad />
 					</div>
 					<div className='gc-action-btns-container'>
-						<div className='gc-action-btn gc-b-btn'>B</div>
-						<div className='gc-action-btn gc-a-btn'>A</div>
+						<button className='gc-action-btn gc-b-btn'>B</button>
+						<button className='gc-action-btn gc-a-btn'>A</button>
 					</div>
 				</div>
 				<div className='gc-option-btns-container'>

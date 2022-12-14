@@ -1,10 +1,10 @@
-import "../styles/GameAndWatch.scss"
-import Soundcloud from "../components/Soundcloud"
-import { Consoles } from "../App"
-import DPad from "../components/DPad"
+import "../../styles/GameAndWatch.scss"
+import Soundcloud from "../../components/Soundcloud"
+import { Consoles } from "../../App"
+import DPad from "../../components/DPad"
 
-const GameAndWatchLogo = require("../assets/imgs/gamenwatch.png")
-const R = require("../assets/imgs/r-png.png")
+const GameAndWatchLogo = require("../../assets/imgs/gamenwatch.png")
+const R = require("../../assets/imgs/r-png.png")
 
 interface GameAndWatchProps {
 	switchComponent: (name: Consoles) => void
@@ -21,16 +21,16 @@ const GameAndWatch = ({ switchComponent }: GameAndWatchProps) => {
 					</div>
 				</div>
 				<div className='gnw-screen-container'>
-					<div className='mario-bros'>SUPER MARIO BROS.</div>
+					<label className='mario-bros'>SUPER MARIO BROS.</label>
 					<div className='gnw-pi-container'>
 						<div className='gnw-screen-n-logo'>
 							<div className='gnw-screen'>
 								<Soundcloud />
 							</div>
-							<div className='gnw-nintendo-logo'>
+							<label className='gnw-nintendo-logo'>
 								Nintendo
 								<img className='gnw-trademark' src={R} alt='trademark' />
-							</div>
+							</label>
 						</div>
 					</div>
 				</div>

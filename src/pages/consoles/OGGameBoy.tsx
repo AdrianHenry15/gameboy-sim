@@ -1,10 +1,10 @@
-import "../styles/OGGameboy.scss"
-import Soundcloud from "../components/Soundcloud"
-import { Consoles } from "../App"
-import DPad from "../components/DPad"
+import "../../styles/OGGameboy.scss"
+import Soundcloud from "../../components/Soundcloud"
+import { Consoles } from "../../App"
+import DPad from "../../components/DPad"
 
-const OGGameboyLogo = require("../assets/imgs/oggameboy-logo.png")
-const TM = require("../assets/imgs/tm-png.png")
+const OGGameboyLogo = require("../../assets/imgs/oggameboy-logo.png")
+const TM = require("../../assets/imgs/tm-png.png")
 
 interface OGGameboyProps {
 	switchComponent: (name: Consoles) => void

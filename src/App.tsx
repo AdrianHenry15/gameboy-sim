@@ -1,11 +1,12 @@
 import { useState } from "react"
 import "./App.css"
-import GBColor from "./pages/GBColor"
-import GBA from "./pages/GBA"
-import OGGameBoy from "./pages/OGGameBoy"
-import GameAndWatch from "./pages/GameAndWatch"
-import SP from "./pages/SP"
-import DS from "./pages/DS"
+import GBColor from "./pages/consoles/GBColor"
+import GBA from "./pages/consoles/GBA"
+import OGGameBoy from "./pages/consoles/OGGameBoy"
+import GameAndWatch from "./pages/consoles/GameAndWatch"
+import SP from "./pages/consoles/SP"
+import DS from "./pages/consoles/DS"
+import Enter from "./pages/Enter"
 
 export enum Consoles {
 	GAMEANDWATCH,
@@ -18,31 +19,35 @@ export enum Consoles {
 
 function App() {
 	let [console, setConsole] = useState(Consoles.SP)
+	let [enter, setEnter] = useState(false)
 
 	const focusComponent = (name: Consoles) => {
 		setConsole(name)
 	}
 
+	const enterApplication = () => {
+		setEnter(true)
+	}
+
 	const renderConsole = (): JSX.Element => {
-		const selectedConsole = console
-		if (selectedConsole === Consoles.GAMEANDWATCH) {
+		if (console === Consoles.GAMEANDWATCH) {
 			return <GameAndWatch switchComponent={focusComponent} />
-		} else if (selectedConsole === Consoles.OGGAMEBOY) {
+		} else if (console === Consoles.OGGAMEBOY) {
 			return <OGGameBoy switchComponent={focusComponent} />
-		} else if (selectedConsole === Consoles.GBCOLOR) {
+		} else if (console === Consoles.GBCOLOR) {
 			return <GBColor switchComponent={focusComponent} />
-		} else if (selectedConsole === Consoles.GBA) {
+		} else if (console === Consoles.GBA) {
 			return <GBA switchComponent={focusComponent} />
-		} else if (selectedConsole === Consoles.SP) {
+		} else if (console === Consoles.SP) {
 			return <SP switchComponent={focusComponent} />
-		} else if (selectedConsole === Consoles.DS) {
+		} else if (console === Consoles.DS) {
 			return <DS switchComponent={focusComponent} />
 		} else {
 			return <div></div>
 		}
 	}
 
-	return <div className='App'>{renderConsole()}</div>
+	return <div className='App'>{enter ? renderConsole() : <Enter enterApplication={enterApplication} />}</div>
 }
 
 export default App

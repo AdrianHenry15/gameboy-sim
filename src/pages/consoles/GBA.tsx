@@ -1,10 +1,10 @@
-import "../styles/GBA.scss"
-import Soundcloud from "../components/Soundcloud"
-import { Consoles } from "../App"
-import DPad from "../components/DPad"
+import "../../styles/GBA.scss"
+import Soundcloud from "../../components/Soundcloud"
+import { Consoles } from "../../App"
+import DPad from "../../components/DPad"
 
-const GBALogo = require("../assets/imgs/oggameboy-logo.png")
-const R = require("../assets/imgs/r-png.png")
+const GBALogo = require("../../assets/imgs/oggameboy-logo.png")
+const R = require("../../assets/imgs/r-png.png")
 
 interface GBAProps {
 	switchComponent: (name: Consoles) => void
@@ -13,10 +13,10 @@ interface GBAProps {
 const GBA = ({ switchComponent }: GBAProps) => {
 	return (
 		<div className='gba-container'>
-			<div className='gba-nintendo-logo'>
+			<label className='gba-nintendo-logo'>
 				Nintendo
 				<img className='gba-trademark' src={R} alt='trademark' />
-			</div>
+			</label>
 			<div className='gba-container-internal'>
 				<div className='dpad-n-options'>
 					<div className='gba-dpad-container'>
@@ -48,12 +48,12 @@ const GBA = ({ switchComponent }: GBAProps) => {
 						<div className='gba-icon-indicators'>
 							<div className='gba-power-light'></div>
 						</div>
-						<div className='gba-power-label'>POWER</div>
+						<label className='gba-power-label'>POWER</label>
 					</div>
 					<div className='gba-button-container'>
 						<div className='gba-action-btns-container'>
-							<div className='gba-action-btn gba-b-btn'>B</div>
-							<div className='gba-action-btn gba-a-btn'>A</div>
+							<button className='gba-action-btn gba-b-btn'>B</button>
+							<button className='gba-action-btn gba-a-btn'>A</button>
 						</div>
 					</div>
 				</div>
