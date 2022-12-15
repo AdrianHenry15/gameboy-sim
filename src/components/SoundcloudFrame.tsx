@@ -1,7 +1,7 @@
 import React from "react"
 import "../styles/Soundcloud.scss"
 
-const Soundcloud = () => {
+const SoundcloudFrame = () => {
 	return (
 		<>
 			<iframe
@@ -29,4 +29,4 @@ const Soundcloud = () => {
 	)
 }
 
-export default Soundcloud
+export default SoundcloudFrame

@@ -1,5 +1,5 @@
 import "../../styles/OGGameboy.scss"
-import Soundcloud from "../../components/Soundcloud"
+import Soundcloud from "../../components/SoundcloudFrame"
 import { Consoles } from "../../App"
 import DPad from "../../components/DPad"
 
