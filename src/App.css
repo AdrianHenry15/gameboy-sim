@@ -1,8 +1,23 @@
 .App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("./assets/imgs/gameboy-wallpaper.jpg");
-  height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
 }
 
+.screen-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background-image: url("./assets/imgs/gameboy-wallpaper.jpg");
+}
+
+.device-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+}

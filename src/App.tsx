@@ -10,6 +10,7 @@ import Enter from "./pages/Enter"
 import { Consoles, StreamType } from "./stores/schemas/Enums"
 import { GlobalStateStore } from "./stores/GlobalStateStore"
 import Track from "./data/Tracks.json"
+import NavBar from "./components/NavBar"
 
 interface IAppProps {
 	store?: GlobalStateStore
@@ -102,7 +103,17 @@ const App = () => {
 		}
 	}
 
-	return <div className='App'>{enter ? renderConsole() : <Enter enterApplication={enterApplication} />}</div>
+	return (
+		<div className='App'>
+			{enter && (
+				<div className='screen-container'>
+					<NavBar />
+					<div className='device-container'>{renderConsole()}</div>
+				</div>
+			)}
+			{!enter && <Enter enterApplication={enterApplication} />}
+		</div>
+	)
 }
 
 export default App

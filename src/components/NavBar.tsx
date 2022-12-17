@@ -1,7 +1,13 @@
-import React from "react"
+import "../styles/Navbar.scss"
 
 const NavBar = () => {
-	return <div>NavBar</div>
+	return (
+		<nav className='navbar'>
+			<div className='icon'></div>
+			<div className='device-controls-container'></div>
+			<div className='shopping-cart'></div>
+		</nav>
+	)
 }
 
 export default NavBar
