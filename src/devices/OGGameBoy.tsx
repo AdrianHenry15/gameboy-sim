@@ -1,16 +1,19 @@
-import "../../styles/OGGameboy.scss"
-import Soundcloud from "../../components/SoundcloudFrame"
-import { Consoles } from "../../App"
-import DPad from "../../components/DPad"
+import "../styles/OGGameboy.scss"
+import Soundcloud from "../components/SoundcloudFrame"
+import { Consoles } from "../stores/schemas/Enums"
+import DPad from "../components/DPad"
 
-const OGGameboyLogo = require("../../assets/imgs/oggameboy-logo.png")
-const TM = require("../../assets/imgs/tm-png.png")
+const OGGameboyLogo = require("../assets/imgs/oggameboy-logo.png")
+const TM = require("../assets/imgs/tm-png.png")
 
 interface OGGameboyProps {
 	switchComponent: (name: Consoles) => void
+	track: string
+	onRightDPadClick: () => void
+	onLeftDPadClick: () => void
 }
 
-const OGGameboy = ({ switchComponent }: OGGameboyProps) => {
+const OGGameboy = (props: OGGameboyProps) => {
 	return (
 		<div className='ogg-container'>
 			<div className='ogg-screen-container'>
@@ -26,7 +29,7 @@ const OGGameboy = ({ switchComponent }: OGGameboyProps) => {
 					</div>
 					<div className='ogg-screen-n-logo'>
 						<div className='ogg-screen'>
-							<Soundcloud />
+							<Soundcloud track={props.track} />
 						</div>
 					</div>
 				</div>
@@ -39,7 +42,7 @@ const OGGameboy = ({ switchComponent }: OGGameboyProps) => {
 				</div>
 				<div className='ogg-button-container'>
 					<div className='ogg-dpad-container'>
-						<DPad />
+						<DPad onLeftDPadClick={() => props.onLeftDPadClick()} onRightClick={() => props.onRightDPadClick()} />
 					</div>
 					<div className='ogg-action-btns-container'>
 						<div className='btn-imprint'></div>
@@ -50,10 +53,10 @@ const OGGameboy = ({ switchComponent }: OGGameboyProps) => {
 				<div className='ogg-option-btns-container'>
 					<div
 						onClick={() => {
-							switchComponent(Consoles.GAMEANDWATCH)
+							props.switchComponent(Consoles.GAMEANDWATCH)
 						}}
 						className='ogg-option-btn ogg-pause-btn'></div>
-					<div onClick={() => switchComponent(Consoles.GBCOLOR)} className='ogg-option-btn ogg-select-btn'></div>
+					<div onClick={() => props.switchComponent(Consoles.GBCOLOR)} className='ogg-option-btn ogg-select-btn'></div>
 				</div>
 			</div>
 		</div>

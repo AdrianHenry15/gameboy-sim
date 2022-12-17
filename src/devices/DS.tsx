@@ -1,16 +1,19 @@
-import "../../styles/DS.scss"
-import Soundcloud from "../../components/SoundcloudFrame"
-import { Consoles } from "../../App"
-import DPad from "../../components/DPad"
+import "../styles/DS.scss"
+import Soundcloud from "../components/SoundcloudFrame"
+import { Consoles } from "../stores/schemas/Enums"
+import DPad from "../components/DPad"
 
-const SPLogo = require("../../assets/imgs/gameboy-color-logo.png")
-const R = require("../../assets/imgs/r-png.png")
+const SPLogo = require("../assets/imgs/gameboy-color-logo.png")
+const R = require("../assets/imgs/r-png.png")
 
 interface DSProps {
 	switchComponent: (name: Consoles) => void
+	track: string
+	onRightDPadClick: () => void
+	onLeftDPadClick: () => void
 }
 
-const DS = ({ switchComponent }: DSProps) => {
+const DS = (props: DSProps) => {
 	return (
 		<div className='full-wrapper'>
 			<div className='ds-container-1'>
@@ -19,7 +22,7 @@ const DS = ({ switchComponent }: DSProps) => {
 						<div className='ds-icon-container'></div>
 						<div className='ds-screen-n-logo'>
 							<div className='ds-screen'>
-								<Soundcloud />
+								<Soundcloud track={props.track} />
 							</div>
 							<div className='ds-gameboy-label'>
 								<img className='ds-logo' src={SPLogo} alt='gbLogo' />
@@ -37,14 +40,14 @@ const DS = ({ switchComponent }: DSProps) => {
 					<div className='ds-controller-area'>
 						<div className='ds-button-container'>
 							<div className='ds-dpad-container'>
-								<DPad />
+								<DPad onLeftDPadClick={() => props.onLeftDPadClick()} onRightClick={() => props.onRightDPadClick()} />
 							</div>
 							<div className='ds-screen-container'>
 								<div className='ds-pi-container'>
 									<div className='ds-icon-container'></div>
 									<div className='ds-screen-n-logo'>
 										<div className='ds-screen'>
-											<Soundcloud />
+											<Soundcloud track={props.track} />
 										</div>
 										<div className='ds-gameboy-label'>
 											<img className='ds-logo' src={SPLogo} alt='gbLogo' />
@@ -66,11 +69,11 @@ const DS = ({ switchComponent }: DSProps) => {
 								<div className='ds-option-btns-container'>
 									<div
 										onClick={() => {
-											switchComponent(Consoles.SP)
+											props.switchComponent(Consoles.SP)
 										}}
 										className='ds-option-btn ds-pause-btn'></div>
 									<div
-										onClick={() => switchComponent(Consoles.GAMEANDWATCH)}
+										onClick={() => props.switchComponent(Consoles.GAMEANDWATCH)}
 										className='ds-option-btn ds-select-btn'></div>
 								</div>
 							</div>

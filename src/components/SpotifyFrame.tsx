@@ -1,4 +1,8 @@
-const SpotifyFrame = () => {
+interface ISpotifyFrameProps {
+	track: string
+}
+
+const SpotifyFrame = (props: ISpotifyFrameProps) => {
 	return (
 		<>
 			<iframe

@@ -2,10 +2,15 @@ import "../styles/DPad.scss"
 import { BiDownArrow, BiLeftArrow, BiRightArrow, BiUpArrow } from "react-icons/bi"
 import { BsFillPlayCircleFill } from "react-icons/bs"
 
-const DPad = () => {
+interface IDPadProps {
+	onRightClick: () => void
+	onLeftDPadClick: () => void
+}
+
+const DPad = (props: IDPadProps) => {
 	return (
 		<>
-			<button className='dpad-btn left-dpad'>
+			<button onClick={() => props.onLeftDPadClick()} className='dpad-btn left-dpad'>
 				<div className='dpad-arrow left-dpad-arrow'>
 					<BiLeftArrow />
 				</div>
@@ -23,7 +28,7 @@ const DPad = () => {
 					<BiDownArrow />
 				</div>
 			</button>
-			<button className='dpad-btn right-dpad'>
+			<button onClick={() => props.onRightClick()} className='dpad-btn right-dpad'>
 				<div className='dpad-arrow right-dpad-arrow'>
 					<BiRightArrow />
 				</div>

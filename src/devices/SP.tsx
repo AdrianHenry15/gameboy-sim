@@ -1,16 +1,19 @@
-import "../../styles/SP.scss"
-import Soundcloud from "../../components/SoundcloudFrame"
-import { Consoles } from "../../App"
-import DPad from "../../components/DPad"
+import "../styles/SP.scss"
+import Soundcloud from "../components/SoundcloudFrame"
+import { Consoles } from "../stores/schemas/Enums"
+import DPad from "../components/DPad"
 
-const SPLogo = require("../../assets/imgs/gameboy-color-logo.png")
-const R = require("../../assets/imgs/r-png.png")
+const SPLogo = require("../assets/imgs/gameboy-color-logo.png")
+const R = require("../assets/imgs/r-png.png")
 
 interface SPProps {
 	switchComponent: (name: Consoles) => void
+	track: string
+	onRightDPadClick: () => void
+	onLeftDPadClick: () => void
 }
 
-const SP = ({ switchComponent }: SPProps) => {
+const SP = (props: SPProps) => {
 	return (
 		<div className='full-wrapper'>
 			<div className='sp-container-1'>
@@ -24,7 +27,7 @@ const SP = ({ switchComponent }: SPProps) => {
 						<div className='sp-icon-container'></div>
 						<div className='sp-screen-n-logo'>
 							<div className='sp-screen'>
-								<Soundcloud />
+								<Soundcloud track={props.track} />
 							</div>
 							<div className='sp-gameboy-label'>
 								<img className='sp-logo' src={SPLogo} alt='gbLogo' />
@@ -49,7 +52,7 @@ const SP = ({ switchComponent }: SPProps) => {
 					</label>
 					<div className='sp-button-container'>
 						<div className='sp-dpad-container'>
-							<DPad />
+							<DPad onLeftDPadClick={() => props.onLeftDPadClick()} onRightClick={() => props.onRightDPadClick()} />
 						</div>
 						<div className='sp-action-btns-container'>
 							<button className='sp-action-btn sp-b-btn'>B</button>
@@ -59,10 +62,10 @@ const SP = ({ switchComponent }: SPProps) => {
 					<div className='sp-option-btns-container'>
 						<div
 							onClick={() => {
-								switchComponent(Consoles.GBA)
+								props.switchComponent(Consoles.GBA)
 							}}
 							className='sp-option-btn sp-pause-btn'></div>
-						<div onClick={() => switchComponent(Consoles.DS)} className='sp-option-btn sp-select-btn'></div>
+						<div onClick={() => props.switchComponent(Consoles.DS)} className='sp-option-btn sp-select-btn'></div>
 					</div>
 				</div>
 			</div>

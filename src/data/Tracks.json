@@ -1,0 +1,72 @@
+{
+	"soundcloud_playlists": [
+		{
+			"id": 1,
+			"playlist_name": "Game/Video Compositions",
+			"src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1400922922&color=%23c5c3c3&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+		},
+		{
+			"id": 2,
+			"playlist_name": "Nintendo Beats",
+			"src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1400922244&color=%23c5c3c3&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+		}
+	],
+	"soundcloud_originals": [
+		{
+			"id": 1,
+			"artists": "Adrian Henry",
+			"song_name": "Waters",
+			"src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1362406102&color=%23c5c3c3&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+		},
+		{
+			"id": 2,
+			"artists": "Adrian Henry",
+			"song_name": "Design",
+			"src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1203060361&color=%23c5c3c3&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+		}
+	],
+	"soundcloud_remixes": [
+		{
+			"id": 1,
+			"artists": ["Billie Eillish", "Adrian Henry"],
+			"song_name": "When The Party's Over Remix",
+			"src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1367512858&color=%23c5c3c3&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+		},
+		{
+			"id": 2,
+			"artists": ["Billie Eillish", "Adrian Henry"],
+			"song_name": "Belly Ache Remix",
+			"src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1367094613&color=%23c5c3c3&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+		}
+	],
+	"spotify_songs": [
+		{
+			"id": 1,
+			"artist_name": "Adrian Henry",
+			"song_name": "Pulse",
+			"album_name": "Winter Park",
+			"src": "https://open.spotify.com/embed/track/0YrCnzmg4fUYKHDMmRWrmK?utm_source=generator"
+		},
+		{
+			"id": 2,
+			"artist_name": "Adrian Henry",
+			"song_name": "Asleep",
+			"album_name": "Fallen",
+			"src": "https://open.spotify.com/embed/track/3VC99rEGjeIa3jVlRL5bgX?utm_source=generator"
+		}
+	],
+	"spotify_albums": [
+		{
+			"id": 1,
+			"artist_name": "Adrian Henry",
+			"album_name": "Fallen",
+			"src": "https://open.spotify.com/embed/album/085jWa6hJW0fumsJfzviiQ?utm_source=generator"
+		},
+		{
+			"id": 2,
+			"artist_name": "Adrian Henry",
+			"album_name": "Winter Park",
+			"src": "https://open.spotify.com/embed/album/22gRrs5tV13YYOftWUpKVJ?utm_source=generator"
+		}
+	]
+}

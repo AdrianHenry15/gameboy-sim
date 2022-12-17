@@ -1,16 +1,19 @@
-import "../../styles/GBA.scss"
-import Soundcloud from "../../components/SoundcloudFrame"
-import { Consoles } from "../../App"
-import DPad from "../../components/DPad"
+import "../styles/GBA.scss"
+import Soundcloud from "../components/SoundcloudFrame"
+import { Consoles } from "../stores/schemas/Enums"
+import DPad from "../components/DPad"
 
-const GBALogo = require("../../assets/imgs/oggameboy-logo.png")
-const R = require("../../assets/imgs/r-png.png")
+const GBALogo = require("../assets/imgs/oggameboy-logo.png")
+const R = require("../assets/imgs/r-png.png")
 
 interface GBAProps {
 	switchComponent: (name: Consoles) => void
+	track: string
+	onRightDPadClick: () => void
+	onLeftDPadClick: () => void
 }
 
-const GBA = ({ switchComponent }: GBAProps) => {
+const GBA = (props: GBAProps) => {
 	return (
 		<div className='gba-container'>
 			<label className='gba-nintendo-logo'>
@@ -20,22 +23,22 @@ const GBA = ({ switchComponent }: GBAProps) => {
 			<div className='gba-container-internal'>
 				<div className='dpad-n-options'>
 					<div className='gba-dpad-container'>
-						<DPad />
+						<DPad onLeftDPadClick={() => props.onLeftDPadClick()} onRightClick={() => props.onRightDPadClick()} />
 					</div>
 					<div className='gba-option-btns-container'>
 						<div
 							onClick={() => {
-								switchComponent(Consoles.GBCOLOR)
+								props.switchComponent(Consoles.GBCOLOR)
 							}}
 							className='gba-option-btn gba-pause-btn'></div>
-						<div onClick={() => switchComponent(Consoles.SP)} className='gba-option-btn gba-select-btn'></div>
+						<div onClick={() => props.switchComponent(Consoles.SP)} className='gba-option-btn gba-select-btn'></div>
 					</div>
 				</div>
 				<div className='gba-screen-container'>
 					<div className='gba-pi-container'>
 						<div className='gba-screen-n-logo'>
 							<div className='gba-screen'>
-								<Soundcloud />
+								<Soundcloud track={props.track} />
 							</div>
 							<div className='gba-gameboy-label'>
 								<img className='gba-logo' src={GBALogo} alt='gbLogo' />

@@ -1,17 +1,20 @@
-import "../../styles/GBColor.scss"
+import "../styles/GBColor.scss"
 import { BiRightArrow } from "react-icons/bi"
-import Soundcloud from "../../components/SoundcloudFrame"
-import { Consoles } from "../../App"
-import DPad from "../../components/DPad"
+import Soundcloud from "../components/SoundcloudFrame"
+import { Consoles } from "../stores/schemas/Enums"
+import DPad from "../components/DPad"
 
-const GBColorLogo = require("../../assets/imgs/gameboy-color-logo.png")
-const R = require("../../assets/imgs/r-png.png")
+const GBColorLogo = require("../assets/imgs/gameboy-color-logo.png")
+const R = require("../assets/imgs/r-png.png")
 
 interface GBColorProps {
 	switchComponent: (name: Consoles) => void
+	track: string
+	onRightDPadClick: () => void
+	onLeftDPadClick: () => void
 }
 
-const GBColor = ({ switchComponent }: GBColorProps) => {
+const GBColor = (props: GBColorProps) => {
 	return (
 		<div className='gc-container'>
 			<div className='gc-screen-container'>
@@ -33,7 +36,7 @@ const GBColor = ({ switchComponent }: GBColorProps) => {
 					</div>
 					<div className='gc-screen-n-logo'>
 						<div className='gc-screen'>
-							<Soundcloud />
+							<Soundcloud track={props.track} />
 						</div>
 						<div className='gc-gameboy-label'>
 							<img className='gc-logo' src={GBColorLogo} alt='gbLogo' />
@@ -48,7 +51,7 @@ const GBColor = ({ switchComponent }: GBColorProps) => {
 				</label>
 				<div className='gc-button-container'>
 					<div className='gc-dpad-container'>
-						<DPad />
+						<DPad onLeftDPadClick={() => props.onLeftDPadClick()} onRightClick={() => props.onRightDPadClick()} />
 					</div>
 					<div className='gc-action-btns-container'>
 						<button className='gc-action-btn gc-b-btn'>B</button>
@@ -58,10 +61,10 @@ const GBColor = ({ switchComponent }: GBColorProps) => {
 				<div className='gc-option-btns-container'>
 					<div
 						onClick={() => {
-							switchComponent(Consoles.OGGAMEBOY)
+							props.switchComponent(Consoles.OGGAMEBOY)
 						}}
 						className='gc-option-btn gc-pause-btn'></div>
-					<div onClick={() => switchComponent(Consoles.GBA)} className='gc-option-btn gc-select-btn'></div>
+					<div onClick={() => props.switchComponent(Consoles.GBA)} className='gc-option-btn gc-select-btn'></div>
 				</div>
 			</div>
 		</div>

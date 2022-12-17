@@ -1,11 +1,13 @@
 {
 	"spotify_albums": [
 		{
+			"id": 1,
 			"artist_name": "Adrian Henry",
 			"album_name": "Fallen",
 			"src": "https://open.spotify.com/embed/album/085jWa6hJW0fumsJfzviiQ?utm_source=generator"
 		},
 		{
+			"id": 2,
 			"artist_name": "Adrian Henry",
 			"album_name": "Winter Park",
 			"src": "https://open.spotify.com/embed/album/22gRrs5tV13YYOftWUpKVJ?utm_source=generator"
