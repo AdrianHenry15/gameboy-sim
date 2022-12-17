@@ -1,173 +1,182 @@
 .gc-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    border: black solid 1px;
-    background-color: var(--gbcolor-color);
-    z-index: 100;
-    width: 300px;
-    height: 495px;
-    border-radius: 10px 10px 60px 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border: black solid 1px;
+	background-color: var(--gbcolor-color);
+	z-index: 100;
+	width: 300px;
+	height: 495px;
+	border-radius: 10px 10px 60px 60px;
 
-    .gc-screen-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        margin-top: 15px;
-        margin-left: 10px;
-        margin-right: 10px;
-        background-color: rgb(61, 61, 61);
-        padding-top: 30px;
-        padding-left: 10px;
-        padding-right: 38px;
+	.gc-screen-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
+		margin-top: 15px;
+		margin-left: 10px;
+		margin-right: 10px;
+		background-color: rgb(61, 61, 61);
+		padding-top: 30px;
+		padding-left: 10px;
+		padding-right: 38px;
 
-        .gc-pi-container {
-            display: flex;
-            flex: 1;
+		.gc-pi-container {
+			display: flex;
+			flex: 1;
 
-            .gc-icon-container {
-                display: flex;
-                flex-direction: column;
-                transform: translate(0px, 35px);
+			.gc-icon-container {
+				display: flex;
+				flex-direction: column;
+				transform: translate(0px, 35px);
 
-                .gc-icon-indicators {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
+				.gc-icon-indicators {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
 
-                .gc-power-light {
-                    width: 5px;
-                    height: 5px;
-                    background-color: red;
-                    border-radius: 50%;
-                    margin-right: 3px;
-                    border: black 1px solid;
-                }
+				.gc-power-light {
+					width: 5px;
+					height: 5px;
+					background-color: red;
+					border-radius: 50%;
+					margin-right: 3px;
+					border: black 1px solid;
+				}
 
-                .gc-arrow-ind {
-                    font-size: 8px;
-                }
-            }
+				.gc-arrow-ind {
+					font-size: 8px;
+				}
+			}
 
-            .gc-power-label {
-                color: gray;
-                font-size: 8px;
-                margin-top: 5px;
-            }
-        }
+			.gc-power-label {
+				color: gray;
+				font-size: 8px;
+				margin-top: 5px;
+			}
+		}
 
-        .gc-gameboy-label {
-            display: flex;
-            padding-top: 20px;
-            padding-bottom: 20px;
+		.gc-gameboy-label {
+			display: flex;
+			padding-top: 20px;
+			padding-bottom: 20px;
 
-            .gc-logo {
-                width: 200px;
-            }
-        }
+			.gc-logo {
+				width: 200px;
+			}
+		}
 
-        .gc-screen-n-logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .gc-screen {
-            display: flex;
-            border: black inset 1px;
-            width: 100%;
-            height: 100%;
-            background-color: rgb(89, 102, 58);
-        }
-    }
+		.gc-screen-n-logo {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 
-    .gc-controller-area {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+		.gc-screen {
+			display: flex;
+			border: black inset 1px;
+			width: 100%;
+			height: 100%;
+			background-color: rgb(89, 102, 58);
+		}
+	}
 
-        .gc-nintendo-logo {
-            display: flex;
-            margin-top: 15px;
-            border: inset 2px black;
-            border-radius: 20px;
-            font-size: 10px;
-            padding: 2px 6px 2px 8px;
+	.gc-controller-area {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
 
-            .gc-trademark {
-                height: 7px;
-                width: 7px;
-            }
-        }
-    }
+		.gc-nintendo-logo {
+			display: flex;
+			margin-top: 15px;
+			border: inset 2px black;
+			border-radius: 20px;
+			font-size: 10px;
+			padding: 2px 6px 2px 8px;
 
-    .gc-button-container {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
+			.gc-trademark {
+				height: 7px;
+				width: 7px;
+			}
+		}
+	}
 
-        .gc-dpad-container {
-            display: flex;
-            z-index: 1;
-        }
+	.gc-button-container {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 20px;
 
-        .gc-action-btns-container {
-            display: flex;
+		.gc-dpad-container {
+			display: flex;
+			z-index: 1;
+		}
 
-            .gc-action-btn {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                background-color: black;
-                border-radius: 50%;
-                margin: 10px;
-                width: 30px;
-                height: 30px;
-                cursor: pointer;
-                font-size: 10px;
-            }
+		.gc-action-btns-container {
+			display: flex;
 
-            .gc-action-btn:hover {
-                background-color: blue;
-            }
+			.gc-action-btn {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				background-color: black;
+				border-radius: 50%;
+				margin: 10px;
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+				font-size: 10px;
+			}
 
-            .gc-action-btn:active {
-                background-color: rgb(157, 211, 255);
-            }
+			.gc-action-btn:hover {
+				background-color: blue;
+			}
 
-            .gc-a-btn {
-                transform: translate(-10px, -15px);
-            }
-        }
-    }
+			.gc-action-btn:active {
+				background-color: rgb(157, 211, 255);
+			}
+
+			.gc-a-btn {
+				transform: translate(-10px, -15px);
+			}
+		}
+	}
 }
 
 .gc-option-btns-container {
-    display: flex;
-    transform: translate(0px, 35px);
+	display: flex;
+	transform: translate(0px, 35px);
 
-    .gc-option-btn {
-        width: 25px;
-        height: 5px;
-        border-radius: 100px;
-        background-color: black;
-        border: solid 1px black;
-        margin: 10px;
-        cursor: pointer;
-    }
+	.gc-option-btn {
+		width: 25px;
+		height: 5px;
+		border-radius: 100px;
+		background-color: black;
+		border: solid 1px black;
+		margin: 10px;
+		cursor: pointer;
 
-    .gc-option-btn:hover {
-        background-color: blue;
-    }
+		.gc-left-arrow {
+			display: flex;
+			transform: translate(-20px, -5.5px);
+		}
+		.gc-right-arrow {
+			display: flex;
+			transform: translate(30px, -5.5px);
+		}
+	}
 
-    .gc-option-btn:active {
-        background-color: rgb(157, 211, 255);
-    }
+	.gc-option-btn:hover {
+		background-color: blue;
+	}
+
+	.gc-option-btn:active {
+		background-color: rgb(157, 211, 255);
+	}
 }

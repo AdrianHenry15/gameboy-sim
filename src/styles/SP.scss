@@ -1,197 +1,207 @@
 .full-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .sp-container-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    border: black solid 1px;
-    background-color: var(--gbcolor-color);
-    z-index: 100;
-    width: 297px;
-    height: 250px;
-    border-radius: 10px 10px 10px 10px;
-    padding: 7px;
-    border: 5px solid gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border: black solid 1px;
+	background-color: var(--gbcolor-color);
+	z-index: 100;
+	width: 297px;
+	height: 250px;
+	border-radius: 10px 10px 10px 10px;
+	padding: 7px;
+	border: 5px solid gray;
 }
 
 .sp-container-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    border: black solid 1px;
-    background-color: var(--gbcolor-color);
-    z-index: 100;
-    width: 315px;
-    height: 250px;
-    border-radius: 20px 20px 10px 10px;
-    border-left: 5px solid gray;
-    border-right: 5px solid gray;
-    border-bottom: 5px solid gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border: black solid 1px;
+	background-color: var(--gbcolor-color);
+	z-index: 100;
+	width: 315px;
+	height: 250px;
+	border-radius: 20px 20px 10px 10px;
+	border-left: 5px solid gray;
+	border-right: 5px solid gray;
+	border-bottom: 5px solid gray;
 }
 
-    .dots-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
+.dots-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 
-        .middle-dot {
-            display: flex;
-            width: 15px;
-            height: 15px;
-            background-color: gray;
-            border-radius: 50%;
-        }
+	.middle-dot {
+		display: flex;
+		width: 15px;
+		height: 15px;
+		background-color: gray;
+		border-radius: 50%;
+	}
 
-        .dots {
-            display: flex;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: gray;
-        }
-    }
+	.dots {
+		display: flex;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: gray;
+	}
+}
 
-    .divider {
-        display: flex;
-        width: 100%;
-        height: 30px;
-        border-radius: 20px;
-        border: 1px solid gray;
-        background-color: var(--gbcolor-color);
-    }
+.divider {
+	display: flex;
+	width: 100%;
+	height: 30px;
+	border-radius: 20px;
+	border: 1px solid gray;
+	background-color: var(--gbcolor-color);
+}
 
-    .sp-screen-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 15px;
-        margin-left: 10px;
-        margin-right: 10px;
-        background-color: black;
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
+.sp-screen-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: black;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 
-        .sp-pi-container {
-            display: flex;
-            flex: 1;
-        }
+	.sp-pi-container {
+		display: flex;
+		flex: 1;
+	}
 
-        .sp-gameboy-label {
-            display: flex;
-            padding-top: 10px;
-            padding-bottom: 10px;
+	.sp-gameboy-label {
+		display: flex;
+		padding-top: 10px;
+		padding-bottom: 10px;
 
-            .sp-logo {
-                width: 100px;
-            }
-        }
+		.sp-logo {
+			width: 100px;
+		}
+	}
 
-        .sp-screen-n-logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .sp-screen {
-            display: flex;
-            border: black inset 1px;
-            width: 100%;
-            height: 100%;
-            background-color: rgb(89, 102, 58);
-        }
-    }
+	.sp-screen-n-logo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .sp-controller-area {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+	.sp-screen {
+		display: flex;
+		border: black inset 1px;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(89, 102, 58);
+	}
+}
 
-        .sp-nintendo-logo {
-            display: flex;
-            margin-top: 15px;
-            border: inset 2px black;
-            border-radius: 20px;
-            font-size: 10px;
-            padding: 2px 6px 2px 8px;
+.sp-controller-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 
-            .sp-trademark {
-                height: 7px;
-                width: 7px;
-            }
-        }
-    }
+	.sp-nintendo-logo {
+		display: flex;
+		margin-top: 15px;
+		border: inset 2px black;
+		border-radius: 20px;
+		font-size: 10px;
+		padding: 2px 6px 2px 8px;
 
-    .sp-button-container {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
+		.sp-trademark {
+			height: 7px;
+			width: 7px;
+		}
+	}
+}
 
-        .sp-dpad-container {
-            display: flex;
-            z-index: 1;
-        }
+.sp-button-container {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
 
-        .sp-action-btns-container {
-            display: flex;
+	.sp-dpad-container {
+		display: flex;
+		z-index: 1;
+	}
 
-            .sp-action-btn {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                background-color: black;
-                border-radius: 50%;
-                margin: 10px;
-                width: 30px;
-                height: 30px;
-                cursor: pointer;
-                font-size: 10px;
-            }
+	.sp-action-btns-container {
+		display: flex;
 
-            .sp-action-btn:hover {
-                background-color: blue;
-            }
+		.sp-action-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			background-color: black;
+			border-radius: 50%;
+			margin: 10px;
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+			font-size: 10px;
+		}
 
-            .sp-action-btn:active {
-                background-color: rgb(157, 211, 255);
-            }
+		.sp-action-btn:hover {
+			background-color: blue;
+		}
 
-            .sp-a-btn {
-                transform: translate(-10px, -15px);
-            }
-        }
-    }
+		.sp-action-btn:active {
+			background-color: rgb(157, 211, 255);
+		}
+
+		.sp-a-btn {
+			transform: translate(-10px, -15px);
+		}
+	}
+}
 
 .sp-option-btns-container {
-    display: flex;
-    transform: translate(0px, 35px);
+	display: flex;
+	transform: translate(0px, 35px);
 
-    .sp-option-btn {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: black;
-        border: solid 1px black;
-        margin: 10px;
-        cursor: pointer;
-    }
+	.sp-left-arrow {
+		display: flex;
+		transform: translate(-20px, -3px);
+	}
 
-    .sp-option-btn:hover {
-        background-color: blue;
-    }
+	.sp-right-arrow {
+		display: flex;
+		transform: translate(14px, -3px);
+	}
 
-    .sp-option-btn:active {
-        background-color: rgb(157, 211, 255);
-    }
+	.sp-option-btn {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: black;
+		border: solid 1px black;
+		margin: 10px;
+		cursor: pointer;
+	}
+
+	.sp-option-btn:hover {
+		background-color: blue;
+	}
+
+	.sp-option-btn:active {
+		background-color: rgb(157, 211, 255);
+	}
 }

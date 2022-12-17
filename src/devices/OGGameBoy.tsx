@@ -2,6 +2,7 @@ import "../styles/OGGameboy.scss"
 import Soundcloud from "../components/SoundcloudFrame"
 import { Consoles } from "../stores/schemas/Enums"
 import DPad from "../components/DPad"
+import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri"
 
 const OGGameboyLogo = require("../assets/imgs/oggameboy-logo.png")
 const TM = require("../assets/imgs/tm-png.png")
@@ -55,8 +56,12 @@ const OGGameboy = (props: OGGameboyProps) => {
 						onClick={() => {
 							props.switchComponent(Consoles.GAMEANDWATCH)
 						}}
-						className='ogg-option-btn ogg-pause-btn'></div>
-					<div onClick={() => props.switchComponent(Consoles.GBCOLOR)} className='ogg-option-btn ogg-select-btn'></div>
+						className='ogg-option-btn ogg-pause-btn'>
+						<RiArrowDropLeftLine className='ogg-left-arrow' />
+					</div>
+					<div onClick={() => props.switchComponent(Consoles.GBCOLOR)} className='ogg-option-btn ogg-select-btn'>
+						<RiArrowDropRightLine className='ogg-right-arrow' />
+					</div>
 				</div>
 			</div>
 		</div>
