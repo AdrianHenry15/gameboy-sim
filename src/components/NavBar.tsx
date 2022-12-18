@@ -32,7 +32,10 @@ const NavBar = (props: INavbarProps) => {
 	return (
 		<nav className='navbar'>
 			<div className='icon-container'>
-				<img src={switchDeviceIcons()} className={props.device === Consoles.GAMEANDWATCH ? "icon gnw-icon" : "icon"}></img>
+				<img
+					alt='gameboy-icons'
+					src={switchDeviceIcons()}
+					className={props.device === Consoles.GAMEANDWATCH ? "icon gnw-icon" : "icon"}></img>
 			</div>
 			<div className='device-controls-container'></div>
 			<div className='shopping-cart'></div>

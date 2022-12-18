@@ -19,7 +19,7 @@ const GameAndWatch = (props: GameAndWatchProps) => {
 		<div className='gnw-container'>
 			<div className='gnw-container-internal'>
 				<div className='dpad-n-logo'>
-					<img src={GameAndWatchLogo} className='gnw-logo'></img>
+					<img alt='gnw-icon' src={GameAndWatchLogo} className='gnw-logo'></img>
 					<div className='gnw-dpad-container'>
 						<DPad onLeftDPadClick={() => props.onLeftDPadClick()} onRightClick={() => props.onRightDPadClick()} />
 					</div>

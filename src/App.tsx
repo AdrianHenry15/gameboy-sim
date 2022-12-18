@@ -7,25 +7,14 @@ import GameAndWatch from "./devices/GameAndWatch"
 import SP from "./devices/SP"
 import DS from "./devices/DS"
 import Enter from "./pages/Enter"
-import { Consoles, StreamType } from "./stores/schemas/Enums"
-import { GlobalStateStore } from "./stores/GlobalStateStore"
+import { Consoles } from "./stores/schemas/Enums"
 import Track from "./data/Tracks.json"
 import NavBar from "./components/NavBar"
 
-interface IAppProps {
-	store?: GlobalStateStore
-}
-type SongType = {
-	id: number
-	artists: string
-	song_name: string
-	src: string
-}
 const App = () => {
 	let [device, setDevice] = useState(Consoles.SP)
 	let [enter, setEnter] = useState(false)
 	let [scTrack, setScTrack] = useState(Track.soundcloud_originals[0].src)
-	let [stream, setStream] = useState(StreamType.SOUNDCLOUD_SONG)
 
 	const focusComponent = (name: Consoles) => {
 		setDevice(name)
@@ -34,10 +23,6 @@ const App = () => {
 	const enterApplication = () => {
 		setEnter(true)
 	}
-
-	const nextStreamType = () => {}
-
-	const previousStreamType = () => {}
 
 	const nextTrack = () => {
 		let songs = Track.soundcloud_originals

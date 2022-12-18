@@ -1,7 +1,4 @@
-import React from "react"
 import "../styles/Soundcloud.scss"
-
-import Tracks from "../data/Tracks.json"
 
 interface ISoundcloudFrameProps {
 	track: string
@@ -11,6 +8,7 @@ const SoundcloudFrame = (props: ISoundcloudFrameProps) => {
 	return (
 		<>
 			<iframe
+				title="Adrian Henry's Songs"
 				className='music-container'
 				width='100%'
 				height='100%'
@@ -19,7 +17,12 @@ const SoundcloudFrame = (props: ISoundcloudFrameProps) => {
 				allow='autoplay'
 				src={props.track}></iframe>
 			<div className='music-frame'>
-				<a className='frame-profile' href='https://soundcloud.com/theadrianhenry' title='Adrian Henry' target='_blank'>
+				<a
+					className='frame-profile'
+					href='https://soundcloud.com/theadrianhenry'
+					title='Adrian Henry'
+					rel='noreferrer'
+					target='_blank'>
 					Adrian Henry
 				</a>{" "}
 				·{" "}
@@ -27,7 +30,8 @@ const SoundcloudFrame = (props: ISoundcloudFrameProps) => {
 					className='frame-song'
 					href='https://soundcloud.com/theadrianhenry/design'
 					title='Design | Beat For Sale'
-					target='_blank'>
+					target='_blank'
+					rel='noreferrer'>
 					Design | Beat For Sale
 				</a>
 			</div>

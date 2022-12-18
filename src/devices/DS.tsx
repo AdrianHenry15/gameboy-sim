@@ -5,7 +5,6 @@ import DPad from "../components/DPad"
 import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri"
 
 const SPLogo = require("../assets/imgs/gameboy-color-logo.png")
-const R = require("../assets/imgs/r-png.png")
 
 interface DSProps {
 	switchComponent: (name: Consoles) => void
