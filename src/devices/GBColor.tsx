@@ -3,6 +3,7 @@ import { BiRightArrow } from "react-icons/bi"
 import Soundcloud from "../components/SoundcloudFrame"
 import { Consoles } from "../stores/schemas/Enums"
 import DPad from "../components/DPad"
+import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri"
 
 const GBColorLogo = require("../assets/imgs/gameboy-color-logo.png")
 const R = require("../assets/imgs/r-png.png")
@@ -63,8 +64,12 @@ const GBColor = (props: GBColorProps) => {
 						onClick={() => {
 							props.switchComponent(Consoles.OGGAMEBOY)
 						}}
-						className='gc-option-btn gc-pause-btn'></div>
-					<div onClick={() => props.switchComponent(Consoles.GBA)} className='gc-option-btn gc-select-btn'></div>
+						className='gc-option-btn gc-pause-btn'>
+						<RiArrowDropLeftLine className='gc-left-arrow' />
+					</div>
+					<div onClick={() => props.switchComponent(Consoles.GBA)} className='gc-option-btn gc-select-btn'>
+						<RiArrowDropRightLine className='gc-right-arrow' />
+					</div>
 				</div>
 			</div>
 		</div>

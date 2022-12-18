@@ -2,6 +2,7 @@ import "../styles/GameAndWatch.scss"
 import Soundcloud from "../components/SoundcloudFrame"
 import { Consoles } from "../stores/schemas/Enums"
 import DPad from "../components/DPad"
+import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri"
 
 const GameAndWatchLogo = require("../assets/imgs/gamenwatch.png")
 const R = require("../assets/imgs/r-png.png")
@@ -43,8 +44,12 @@ const GameAndWatch = (props: GameAndWatchProps) => {
 							onClick={() => {
 								props.switchComponent(Consoles.DS)
 							}}
-							className='gnw-option-btn gnw-pause-btn'></div>
-						<div onClick={() => props.switchComponent(Consoles.OGGAMEBOY)} className='gnw-option-btn gnw-select-btn'></div>
+							className='gnw-option-btn gnw-pause-btn'>
+							<RiArrowDropLeftLine className='gnw-left-arrow' />
+						</div>
+						<div onClick={() => props.switchComponent(Consoles.OGGAMEBOY)} className='gnw-option-btn gnw-select-btn'>
+							<RiArrowDropRightLine className='gnw-right-arrow' />
+						</div>
 						<div className='gnw-option-btn special-option'></div>
 					</div>
 					<div className='gnw-button-container'>

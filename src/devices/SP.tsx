@@ -2,6 +2,7 @@ import "../styles/SP.scss"
 import Soundcloud from "../components/SoundcloudFrame"
 import { Consoles } from "../stores/schemas/Enums"
 import DPad from "../components/DPad"
+import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri"
 
 const SPLogo = require("../assets/imgs/gameboy-color-logo.png")
 const R = require("../assets/imgs/r-png.png")
@@ -64,8 +65,12 @@ const SP = (props: SPProps) => {
 							onClick={() => {
 								props.switchComponent(Consoles.GBA)
 							}}
-							className='sp-option-btn sp-pause-btn'></div>
-						<div onClick={() => props.switchComponent(Consoles.DS)} className='sp-option-btn sp-select-btn'></div>
+							className='sp-option-btn sp-pause-btn'>
+							<RiArrowDropLeftLine className='sp-left-arrow' />
+						</div>
+						<div onClick={() => props.switchComponent(Consoles.DS)} className='sp-option-btn sp-select-btn'>
+							<RiArrowDropRightLine className='sp-right-arrow' />
+						</div>
 					</div>
 				</div>
 			</div>

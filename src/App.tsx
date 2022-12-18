@@ -107,6 +107,7 @@ const App = () => {
 		<div className='App'>
 			{enter && (
 				<div className='screen-container'>
+					<NavBar device={device} />
 					<div className='device-container'>{renderConsole()}</div>
 				</div>
 			)}

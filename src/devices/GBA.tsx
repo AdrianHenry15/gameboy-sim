@@ -2,6 +2,7 @@ import "../styles/GBA.scss"
 import Soundcloud from "../components/SoundcloudFrame"
 import { Consoles } from "../stores/schemas/Enums"
 import DPad from "../components/DPad"
+import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri"
 
 const GBALogo = require("../assets/imgs/oggameboy-logo.png")
 const R = require("../assets/imgs/r-png.png")
@@ -30,8 +31,12 @@ const GBA = (props: GBAProps) => {
 							onClick={() => {
 								props.switchComponent(Consoles.GBCOLOR)
 							}}
-							className='gba-option-btn gba-pause-btn'></div>
-						<div onClick={() => props.switchComponent(Consoles.SP)} className='gba-option-btn gba-select-btn'></div>
+							className='gba-option-btn gba-pause-btn'>
+							<RiArrowDropLeftLine className='gba-left-arrow' />
+						</div>
+						<div onClick={() => props.switchComponent(Consoles.SP)} className='gba-option-btn gba-select-btn'>
+							<RiArrowDropRightLine className='gba-right-arrow' />
+						</div>
 					</div>
 				</div>
 				<div className='gba-screen-container'>

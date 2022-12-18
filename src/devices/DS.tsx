@@ -2,6 +2,7 @@ import "../styles/DS.scss"
 import Soundcloud from "../components/SoundcloudFrame"
 import { Consoles } from "../stores/schemas/Enums"
 import DPad from "../components/DPad"
+import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri"
 
 const SPLogo = require("../assets/imgs/gameboy-color-logo.png")
 const R = require("../assets/imgs/r-png.png")
@@ -71,10 +72,14 @@ const DS = (props: DSProps) => {
 										onClick={() => {
 											props.switchComponent(Consoles.SP)
 										}}
-										className='ds-option-btn ds-pause-btn'></div>
+										className='ds-option-btn ds-pause-btn'>
+										<RiArrowDropLeftLine className='ds-left-arrow' />
+									</div>
 									<div
 										onClick={() => props.switchComponent(Consoles.GAMEANDWATCH)}
-										className='ds-option-btn ds-select-btn'></div>
+										className='ds-option-btn ds-select-btn'>
+										<RiArrowDropRightLine className='ds-right-arrow' />
+									</div>
 								</div>
 							</div>
 						</div>

@@ -1,188 +1,197 @@
 .gba-container {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    border: white solid 1px;
-    background-color: var(--gba-color);
-    z-index: 100;
-    width: 600px;
-    height: 285px;
-    border-radius: 30px 30px 60px 60px;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	border: white solid 1px;
+	background-color: var(--gba-color);
+	z-index: 100;
+	width: 600px;
+	height: 285px;
+	border-radius: 30px 30px 60px 60px;
 
-    .gba-nintendo-logo {
-        display: flex;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        border: inset 2px black;
-        border-radius: 20px;
-        padding: 2px 10px 2px 13px;
-        font-size: 10px;
-    
-        .gba-trademark {
-            height: 7px;
-            width: 7px;
-        }
-    }
+	.gba-nintendo-logo {
+		display: flex;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		border: inset 2px black;
+		border-radius: 20px;
+		padding: 2px 10px 2px 13px;
+		font-size: 10px;
 
-    .gba-container-internal {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+		.gba-trademark {
+			height: 7px;
+			width: 7px;
+		}
+	}
 
-        .dpad-n-options {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            flex: 1;
+	.gba-container-internal {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-            .gba-dpad-container {
-                display: flex;
-                z-index: 1;
-            }
+		.dpad-n-options {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			flex: 1;
 
-            .gba-option-btns-container {
-                display: flex;
-                flex-direction: column;
-                transform: translate(54px, 78px);
-            
-                .gba-option-btn {
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 50%;
-                    background-color: white;
-                    margin: 5px;
-                    cursor: pointer;
-                }
-            
-                .gba-option-btn:hover {
-                    background-color: blue;
-                }
-            
-                .gba-option-btn:active {
-                    background-color: rgb(157, 211, 255);
-                }
-            }
-        }
-    }
+			.gba-left-arrow {
+				display: flex;
+				transform: translate(-14px, -3px);
+			}
+			.gba-right-arrow {
+				display: flex;
+				transform: translate(8px, -2px);
+			}
 
-    .gba-screen-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        background-color: rgb(15, 15, 15);
-        padding-top: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        flex: 2;
-        border: rgb(150, 150, 150) 1px solid;
+			.gba-dpad-container {
+				display: flex;
+				z-index: 1;
+			}
 
-        .gba-pi-container {
-            display: flex;
-            flex: 1;
-        }
+			.gba-option-btns-container {
+				display: flex;
+				flex-direction: column;
+				transform: translate(54px, 78px);
 
-        .gba-gameboy-label {
-            display: flex;
-            padding-top: 20px;
-            padding-bottom: 20px;
+				.gba-option-btn {
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: white;
+					margin: 5px;
+					cursor: pointer;
+				}
 
-            .gba-logo {
-                width: 85px;
-            }
-        }
+				.gba-option-btn:hover {
+					background-color: blue;
+				}
 
-        .gba-screen-n-logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .gba-screen {
-            display: flex;
-            border: black inset 1px;
-            width: 100%;
-            height: 100%;
-            background-color: rgb(89, 102, 58);
-        }
-    }
+				.gba-option-btn:active {
+					background-color: rgb(157, 211, 255);
+				}
+			}
+		}
+	}
 
-    .gba-controller-area {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        flex: 1;
-    }
+	.gba-screen-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
+		background-color: rgb(15, 15, 15);
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		flex: 2;
+		border: rgb(150, 150, 150) 1px solid;
 
-    .gba-button-container {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
+		.gba-pi-container {
+			display: flex;
+			flex: 1;
+		}
 
-        .gba-action-btns-container {
-            display: flex;
-            margin-left: 25px;
+		.gba-gameboy-label {
+			display: flex;
+			padding-top: 20px;
+			padding-bottom: 20px;
 
-            .gba-action-btn {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: black;
-                background-color: white;
-                border-radius: 50%;
-                margin: 10px;
-                width: 30px;
-                height: 30px;
-                cursor: pointer;
-                font-size: 10px;
-            }
+			.gba-logo {
+				width: 85px;
+			}
+		}
 
-            .gba-action-btn:hover {
-                background-color: blue;
-            }
+		.gba-screen-n-logo {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 
-            .gba-action-btn:active {
-                background-color: rgb(157, 211, 255);
-            }
+		.gba-screen {
+			display: flex;
+			border: black inset 1px;
+			width: 100%;
+			height: 100%;
+			background-color: rgb(89, 102, 58);
+		}
+	}
 
-            .gba-a-btn {
-                transform: translate(-10px, -15px);
-            }
-        }
-    }
+	.gba-controller-area {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		flex: 1;
+	}
+
+	.gba-button-container {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 20px;
+
+		.gba-action-btns-container {
+			display: flex;
+			margin-left: 25px;
+
+			.gba-action-btn {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: black;
+				background-color: white;
+				border-radius: 50%;
+				margin: 10px;
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+				font-size: 10px;
+			}
+
+			.gba-action-btn:hover {
+				background-color: blue;
+			}
+
+			.gba-action-btn:active {
+				background-color: rgb(157, 211, 255);
+			}
+
+			.gba-a-btn {
+				transform: translate(-10px, -15px);
+			}
+		}
+	}
 }
 
 .gba-icon-container {
-    display: flex;
-    transform: translate(0px, -83px);
+	display: flex;
+	transform: translate(0px, -83px);
 
-    .gba-icon-indicators {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+	.gba-icon-indicators {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-    .gba-power-light {
-        width: 5px;
-        height: 5px;
-        background-color: red;
-        border-radius: 50%;
-        margin-right: 3px;
-        border: black 1px solid;
-    }
+	.gba-power-light {
+		width: 5px;
+		height: 5px;
+		background-color: red;
+		border-radius: 50%;
+		margin-right: 3px;
+		border: black 1px solid;
+	}
 
-    .gba-arrow-ind {
-        font-size: 8px;
-    }
+	.gba-arrow-ind {
+		font-size: 8px;
+	}
 }
 
 .gba-power-label {
-    color: gray;
-    font-size: 8px;
-    margin-top: 5px;
+	color: gray;
+	font-size: 8px;
+	margin-top: 5px;
 }
