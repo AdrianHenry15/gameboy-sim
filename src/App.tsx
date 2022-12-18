@@ -12,7 +12,7 @@ import Track from "./data/Tracks.json"
 import NavBar from "./components/NavBar"
 
 const App = () => {
-	let [device, setDevice] = useState(Consoles.SP)
+	let [device, setDevice] = useState(Consoles.GBCOLOR)
 	let [enter, setEnter] = useState(false)
 	let [scTrack, setScTrack] = useState(Track.soundcloud_originals[0].src)
 
