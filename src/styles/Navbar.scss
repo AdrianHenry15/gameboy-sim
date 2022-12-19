@@ -2,7 +2,7 @@
 	display: flex;
 	width: 100%;
 	background-color: black;
-	height: 150px;
+	height: 180px;
 
 	.icon-container {
 		display: flex;
@@ -18,6 +18,10 @@
 			font-size: 35px;
 			margin-left: 10px;
 			color: white;
+
+			.nav-device-name {
+				text-align: center;
+			}
 		}
 
 		.gnw-icon {
@@ -32,7 +36,10 @@
 
 	.device-controls-container {
 		display: flex;
+		justify-content: center;
+		align-items: center;
 		flex: 5;
+		margin: 40px;
 	}
 
 	.shopping-cart {

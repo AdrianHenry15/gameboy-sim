@@ -45,7 +45,10 @@ const NavBar = (props: INavbarProps) => {
 			case Consoles.GAMEANDWATCH:
 				return (
 					<div className='device-name-container'>
-						<div className='nav-device-name'>Game And Watch</div>
+						<div className='nav-device-name'>
+							{" "}
+							Game <br /> & <br /> Watch
+						</div>
 					</div>
 				)
 			case Consoles.GBA:
@@ -65,7 +68,9 @@ const NavBar = (props: INavbarProps) => {
 			case Consoles.OGGAMEBOY:
 				return (
 					<div className='device-name-container'>
-						<div className='nav-device-name'>The Original</div>
+						<div className='nav-device-name'>
+							The <br /> Original
+						</div>
 						<div className='nav-gameboy'>Gameboy</div>
 					</div>
 				)
