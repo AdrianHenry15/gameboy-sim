@@ -1,6 +1,8 @@
+import { useState } from "react"
 import { Consoles } from "../stores/schemas/Enums"
 import "../styles/Navbar.scss"
 import DeviceControls from "./DeviceControls"
+import { BsController } from "react-icons/bs"
 // icons
 const GBColorIcon = require("../assets/icons/GBColor.png")
 const GBAIcon = require("../assets/icons/GBA.png")
@@ -14,7 +16,16 @@ interface INavbarProps {
 }
 
 const NavBar = (props: INavbarProps) => {
+	const [switchNav, setSwitchNav] = useState(false)
 	// functions
+
+	const switchNavLayout = () => {
+		if (switchNav === false) {
+			setSwitchNav(true)
+		} else {
+			setSwitchNav(false)
+		}
+	}
 
 	const switchDeviceIcons = () => {
 		switch (props.device) {
@@ -85,18 +96,26 @@ const NavBar = (props: INavbarProps) => {
 	}
 
 	return (
-		<nav className='navbar'>
-			<div className='icon-container'>
-				<img
-					alt='gameboy-icons'
-					src={switchDeviceIcons()}
-					className={props.device === Consoles.GAMEANDWATCH ? "icon gnw-icon" : "icon"}
-				/>
-				{switchDeviceNames()}
-			</div>
-			<div className='device-controls-container'>
-				<DeviceControls />
-			</div>
+		<nav className={switchNav ? "navbar-mobile" : "navbar"}>
+			{!switchNav && (
+				<div className='icon-container'>
+					<img
+						onClick={() => switchNavLayout()}
+						alt='gameboy-icons'
+						src={switchDeviceIcons()}
+						className={props.device === Consoles.GAMEANDWATCH ? "icon gnw-icon" : "icon"}
+					/>
+					{switchDeviceNames()}
+
+					<BsController className='switch-icon' onClick={() => switchNavLayout()} />
+				</div>
+			)}
+			{switchNav && (
+				<div className='device-controls-container'>
+					<span className='controls-label'>Controls</span>
+					<DeviceControls switchNav={switchNav} setSwitchNav={switchNavLayout} />
+				</div>
+			)}
 			<div className='shopping-cart'></div>
 		</nav>
 	)

@@ -15,7 +15,7 @@ interface DSProps {
 
 const DS = (props: DSProps) => {
 	return (
-		<div className='full-wrapper'>
+		<div className='ds-full-wrapper'>
 			<div className='ds-container-1'>
 				<div className='ds-screen-container'>
 					<div className='ds-pi-container'>

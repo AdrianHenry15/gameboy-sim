@@ -188,3 +188,11 @@
 		}
 	}
 }
+
+// mobile devices
+@media (max-width: 480px) {
+	.gnw-container {
+		transform: rotate(-90deg);
+		width: 480px;
+	}
+}

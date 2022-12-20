@@ -3,7 +3,7 @@
 	justify-content: center;
 	align-items: center;
 	color: white;
-	font-size: 11px;
+	font-size: 9px;
 	flex-wrap: wrap;
 
 	.device-btn-wrapper {
@@ -120,5 +120,21 @@
 				}
 			}
 		}
+	}
+}
+
+// tablets
+
+// mobile devices
+@media (max-width: 480px) {
+	.dc-switch-icon {
+		display: flex;
+		margin-left: 10px;
+		width: 30px;
+		height: 30px;
+		color: white;
+	}
+	.dc-switch-icon:active {
+		color: black;
 	}
 }

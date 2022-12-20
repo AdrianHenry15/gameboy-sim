@@ -2,10 +2,15 @@ import "../styles/DeviceControls.scss"
 
 //icons
 import { BiDownArrow, BiLeftArrow, BiRightArrow, BiUpArrow } from "react-icons/bi"
-import { BsFillPlayCircleFill } from "react-icons/bs"
+import { BsController, BsFillPlayCircleFill } from "react-icons/bs"
 import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri"
 
-const DeviceControls = () => {
+interface IDeviceControls {
+	switchNav: boolean
+	setSwitchNav: () => void
+}
+
+const DeviceControls = (props: IDeviceControls) => {
 	return (
 		<div className='device-controller-btns-container'>
 			{/* Up */}
@@ -101,6 +106,14 @@ const DeviceControls = () => {
 				<button className='device-action-btn'>Y</button>
 				<span className='device-description'>TBD</span>
 			</div>
+
+			{/* Navbar Switch */}
+			{props.switchNav && (
+				<div className='device-btn-wrapper'>
+					<BsController className='dc-switch-icon' onClick={() => props.setSwitchNav()} />
+					<span className='device-description'>Go Back To Gameboy</span>
+				</div>
+			)}
 		</div>
 	)
 }

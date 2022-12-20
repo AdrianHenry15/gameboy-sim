@@ -1,4 +1,4 @@
-.full-wrapper {
+.ds-full-wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -208,5 +208,23 @@
 
 	.ds-option-btn:active {
 		background-color: rgb(157, 211, 255);
+	}
+}
+
+// mobile devices
+@media (max-width: 480px) {
+	.ds-full-wrapper {
+		transform: rotate(-90deg);
+		width: 480px;
+	}
+
+	.ds-container-1 {
+		width: 450px;
+		height: 170px;
+	}
+
+	.ds-container-2 {
+		width: 450px;
+		height: 170px;
 	}
 }

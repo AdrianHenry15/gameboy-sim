@@ -54,6 +54,7 @@
 			.gba-option-btns-container {
 				display: flex;
 				flex-direction: column;
+				margin-right: 22px;
 				transform: translate(54px, 78px);
 
 				.gba-option-btn {
@@ -194,4 +195,14 @@
 	color: gray;
 	font-size: 8px;
 	margin-top: 5px;
+}
+
+// tablet
+
+// mobile devices
+@media (max-width: 480px) {
+	.gba-container {
+		transform: rotate(-90deg);
+		width: 480px;
+	}
 }

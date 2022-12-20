@@ -16,7 +16,7 @@ interface SPProps {
 
 const SP = (props: SPProps) => {
 	return (
-		<div className='full-wrapper'>
+		<div className='sp-full-wrapper'>
 			<div className='sp-container-1'>
 				<div className='dots-container'>
 					<div className='dots'></div>
