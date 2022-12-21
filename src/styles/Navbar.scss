@@ -52,6 +52,9 @@
 
 // mobile devices
 @media (max-width: 480px) {
+	.device-controls-container-off {
+		display: none !important;
+	}
 	.switch-icon {
 		display: flex;
 		margin-left: 10px;

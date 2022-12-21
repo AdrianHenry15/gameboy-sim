@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Consoles } from "../stores/schemas/Enums"
 import "../styles/Navbar.scss"
 import DeviceControls from "./DeviceControls"
@@ -95,6 +95,14 @@ const NavBar = (props: INavbarProps) => {
 		}
 	}
 
+	const getWindowDimensions = () => {
+		const { innerWidth: width, innerHeight: height } = window
+		return {
+			width,
+			height,
+		}
+	}
+
 	return (
 		<nav className={switchNav ? "navbar-mobile" : "navbar"}>
 			{!switchNav && (
@@ -110,12 +118,11 @@ const NavBar = (props: INavbarProps) => {
 					<BsController className='switch-icon' onClick={() => switchNavLayout()} />
 				</div>
 			)}
-			{switchNav && (
-				<div className='device-controls-container'>
-					<span className='controls-label'>Controls</span>
-					<DeviceControls switchNav={switchNav} setSwitchNav={switchNavLayout} />
-				</div>
-			)}
+
+			<div className={switchNav ? "device-controls-container-on" : "device-controls-container-off"}>
+				<span className='controls-label'>Controls</span>
+				<DeviceControls switchNav={switchNav} setSwitchNav={switchNavLayout} />
+			</div>
 			<div className='shopping-cart'></div>
 		</nav>
 	)
